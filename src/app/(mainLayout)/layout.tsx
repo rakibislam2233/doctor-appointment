@@ -1,3 +1,4 @@
+import Header from "@/components/Shared/Header/Header";
 import React from "react";
 
 interface IChildren {
@@ -6,9 +7,7 @@ interface IChildren {
 const MainLayout = ({ children }: IChildren) => {
   return (
     <main>
-      <header>
-        <h1>Doctor Appointment</h1>
-      </header>
+     <Header/>
       {children}
       <footer>&copy; 2024 Doctor Appointment. All rights reserved.</footer>
     </main>
