@@ -33,7 +33,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         type="default"
         htmlType="submit"
         loading={loading}
-        className={`${className} bg-[#77C4FE] flex px-10 py-6 justify-center items-center gap-5 text-white ${
+        className={`${className} w-full bg-[#77C4FE] flex px-10 py-6 justify-center items-center gap-5 text-white ${
           border ? "rounded-lg" : "rounded-xl"
         } transition-all duration-500`}
         style={{
