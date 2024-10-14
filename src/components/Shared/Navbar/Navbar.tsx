@@ -38,7 +38,7 @@ const navLinks = [
 const Navbar = () => {
     const path = usePathname()
   return (
-   <nav className={`w-full ${path==='/' && "bg-[#F1F9FF]"} pt-5`}>
+   <nav className={`w-full ${path==='/' && "bg-[#F1F9FF]"} py-5`}>
       <MainContainer className="p-3 bg-[#D5EDFF] flex justify-between items-center rounded-lg">
        <div>
           <div className="size-16 rounded-full bg-[#77C4FE]">

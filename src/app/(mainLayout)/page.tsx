@@ -1,8 +1,11 @@
+import HeroSection from "@/components/Pages/Home/HeroSection";
+
 const MainPage = () => {
   return (
-    <div>MainPage
-    </div>
-  )
-}
+    <>
+      <HeroSection />
+    </>
+  );
+};
 
-export default MainPage
+export default MainPage;

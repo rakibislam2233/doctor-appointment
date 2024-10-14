@@ -4,7 +4,7 @@ import SubNavbar from "../Navbar/SubNavbar";
 
 const Header = () => {
   return (
-    <header>
+    <header className="hidden md:block">
       <SubNavbar />
       <Navbar />
     </header>
