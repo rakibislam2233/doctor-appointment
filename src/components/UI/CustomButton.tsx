@@ -28,13 +28,13 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       <div
         className={`${
           border ? "w-full border-2 border-[#77C4FE]" : ""
-        } p-0.5 rounded-lg inline-block`}
+        } p-0.5 rounded-xl inline-block`}
       >
         <Button
           type="default"
           htmlType="submit"
           loading={loading}
-          className={`${className} bg-[#77C4FE] flex px-10 py-5 justify-center items-center gap-5 text-white rounded-md transition-all duration-500`}
+          className={`${className} bg-[#77C4FE] flex px-10 py-6 justify-center items-center gap-5 text-white ${border?"rounded-lg" : "rounded-xl"} transition-all duration-500`}
           style={{
             backgroundColor: "#77C4FE", // Custom background color
             border: border ? "2px solid #77C4FE" : "none", // Custom border
