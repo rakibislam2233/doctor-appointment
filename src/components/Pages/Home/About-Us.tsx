@@ -23,7 +23,7 @@ const AboutUs = () => {
             </p>
 
             <div className="mt-5">
-              <CustomButton hover>See More</CustomButton>
+              <CustomButton>See More</CustomButton>
             </div>
           </div>
         </div>

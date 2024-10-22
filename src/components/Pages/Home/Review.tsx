@@ -3,13 +3,14 @@ import Slider from "react-slick";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 const reviews = [
   {
     id: 1,
-    name: "Elza R",
+    name: "Elba R",
     location: "New York, USA",
     review:
-      "Navigating my husband's chronic illness felt overwhelming until we joined Clinivea. Our MVR has been with us every step of the way, ensuring we make informed decisions.",
+      "Navigating my husband's chronic illness felt overwhelming until we joined Cline. Our MVR has been with us every step of the way, ensuring we make informed decisions.",
     image: "https://via.placeholder.com/150",
     rating: 5,
   },
@@ -18,7 +19,7 @@ const reviews = [
     name: "John D",
     location: "California, USA",
     review:
-      "Amazing service! Clinivea helped us find clarity during challenging times and provided the best solutions for my family.",
+      "Amazing service! Cline helped us find clarity during challenging times and provided the best solutions for my family.",
     image: "https://via.placeholder.com/150",
     rating: 4,
   },
@@ -48,7 +49,9 @@ const Review = () => {
             <div key={review.id} className="flex items-center justify-center p-10">
               <div className="flex bg-white rounded-xl shadow-lg w-2/3">
                 <div className="w-1/3 p-5">
-                  <img
+                  <Image
+                  width={500}
+                  height={500}
                     src={review.image}
                     alt={review.name}
                     className="rounded-xl object-cover w-full h-full"

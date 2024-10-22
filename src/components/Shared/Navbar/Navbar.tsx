@@ -51,7 +51,7 @@ const Navbar = () => {
          ))}
        </ul>
        <div>
-        <CustomButton hover>
+        <CustomButton>
            Login
         </CustomButton>
        </div>

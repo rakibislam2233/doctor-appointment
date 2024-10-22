@@ -25,7 +25,7 @@ const HeroSection = () => {
           </p>
           {/* Appointment button */}
           <div className="space-x-5">
-            <CustomButton  hover>Book an appointment</CustomButton>
+            <CustomButton >Book an appointment</CustomButton>
           </div>
         </div>
 
