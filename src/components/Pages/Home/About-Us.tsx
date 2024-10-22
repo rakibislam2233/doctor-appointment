@@ -7,7 +7,7 @@ import CustomButton from "@/components/UI/CustomButton";
 
 const AboutUs = () => {
   return (
-    <section className="w-full px-5 py-10">
+    <section className="w-full px-5 py-16">
       <MainContainer className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Right section with text content (first on mobile, second on larger screens) */}
         <div className="w-full h-full flex items-center bg-cover bg-center order-1 md:order-2" 

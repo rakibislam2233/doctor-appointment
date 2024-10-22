@@ -36,12 +36,20 @@ const reviews = [
 ];
 
 // Custom Arrow Component
-const CustomArrow = (props:any) => {
+const CustomArrow = (props: any) => {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: "flex", justifyContent:"center", alignItems: "center",  background: "#D3B5D3", padding:"20px", borderRadius: "50%" }}
+      style={{
+        ...style,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "#D3B5D3",
+        padding: "20px",
+        borderRadius: "50%",
+      }}
       onClick={onClick}
     ></div>
   );
@@ -56,13 +64,13 @@ const Review = () => {
     slidesToShow: 1, // Show 1 slide at a time on mobile
     slidesToScroll: 1, // Scroll 1 slide at a time
     arrows: true, // Enable arrows
-    nextArrow: <CustomArrow  />, // Custom next arrow
+    nextArrow: <CustomArrow />, // Custom next arrow
     prevArrow: <CustomArrow />, // Custom previous arrow
     responsive: [
       {
         breakpoint: 768, // Tablet view
         settings: {
-          slidesToShow: 2, // Show 2 reviews at a time on tablets
+          slidesToShow: 1, // Show 2 reviews at a time on tablets
           slidesToScroll: 1,
         },
       },
@@ -79,45 +87,42 @@ const Review = () => {
   return (
     <section className="w-full px-5 py-16">
       <MainContainer>
-        <div className="p-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800">
+        <div className="text-center space-y-3 mb-10">
+          <h1 className="text-4xl font-semibold text-[#32526B]">
+            {" "}
             Some Reviews
-          </h2>
-          <h3 className="text-lg text-center text-gray-600 mb-10">
-            What Are People Saying About Us
-          </h3>
-
-          {/* React Slick Slider */}
-          <Slider {...settings}>
-            {reviews.map((review, index) => (
-              <div key={index} className="w-full  px-4">
-                <div className="w-full flex items-center">
-                  <div className="w-[13%] h-[520px] bg-[#D3B5D3] rounded-xl sticky"></div>
-                  <div className="w-[87%] h-full flex items-center gap-10 z-50 -ml-10">
-                    <Image
-                      width={300}
-                      height={300}
-                      src={review.image}
-                      alt="image"
-                      className="rounded-xl"
-                    />
-                    <div>
-                      <h4 className="text-3xl font-semibold text-gray-800">
-                        {review.name}
-                      </h4>
-                      <h1 className="text-gray-500">{review.location}</h1>
-                      <p className="mt-4 text-gray-700">{review.review}</p>
-                      <div className="mt-4 text-yellow-500 text-2xl">
-                        {"★".repeat(review.rating)}
-                        {"☆".repeat(5 - review.rating)}
-                      </div>
+          </h1>
+          <p className="text-gray-900">What Are People Saying About Us</p>
+        </div>
+        <Slider {...settings}>
+          {reviews.map((review, index) => (
+            <div key={index} className="w-full px-4">
+              <div className="w-full flex items-center">
+                <div className=" hidden md:block w-[13%] h-[520px] bg-[#D3B5D3] rounded-xl"></div>
+                <div className="w-full md:w-[87%] h-full flex flex-col md:flex-row items-center gap-10 md:z-50 -ml-0 md:-ml-10">
+                  <Image
+                    width={300}
+                    height={300}
+                    src={review.image}
+                    alt="image"
+                    className="rounded-xl"
+                  />
+                  <div>
+                    <h4 className="text-3xl font-semibold text-gray-800">
+                      {review.name}
+                    </h4>
+                    <h1 className="text-gray-500">{review.location}</h1>
+                    <p className="mt-4 text-gray-700">{review.review}</p>
+                    <div className="mt-4 text-yellow-500 text-2xl">
+                      {"★".repeat(review.rating)}
+                      {"☆".repeat(5 - review.rating)}
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </Slider>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </MainContainer>
     </section>
   );

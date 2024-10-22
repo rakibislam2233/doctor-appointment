@@ -1,4 +1,5 @@
 import AboutUs from "@/components/Pages/Home/About-Us";
+import Faq from "@/components/Pages/Home/Faq";
 import HeroSection from "@/components/Pages/Home/HeroSection";
 import MyValues from "@/components/Pages/Home/MyValues";
 import Pricing from "@/components/Pages/Home/Pricing";
@@ -12,6 +13,7 @@ const MainPage = () => {
       <AboutUs/>
       <Pricing/>
       <Review/>
+      <Faq/>
     </>
   );
 };
