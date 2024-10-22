@@ -71,10 +71,10 @@ const Faq = () => {
             <div
               key={index}
               onClick={() => toggleFaq(index)}
-              className={`w-full p-5 cursor-pointer transition-all duration-500 ease-in-out ${
+              className={`w-full p-5 cursor-pointer transition-all duration-500 ease-in-out  rounded-xl ${
                 openIndex === index
-                  ? "bg-[#6CB2E7] rounded-xl"
-                  : "border-b border-gray-900"
+                  ? "bg-[#6CB2E7]"
+                  : "border-b border-gray-900 "
               }`}
             >
               <div className="flex justify-between items-center">
@@ -107,7 +107,11 @@ const Faq = () => {
                   openIndex === index ? "max-h-[400px]" : "max-h-0"
                 }`}
               >
-                <p className={`mt-3 ${openIndex === index ? "opacity-100 text-white" : "opacity-0"}`}>
+                <p
+                  className={`mt-3 ${
+                    openIndex === index ? "opacity-100 text-white" : "opacity-0"
+                  }`}
+                >
                   {faq.answer}
                 </p>
               </div>
