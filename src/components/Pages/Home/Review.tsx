@@ -1,89 +1,123 @@
 "use client";
-import Slider from "react-slick";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
+import Image from "next/image";
+import React from "react";
+import Slider from "react-slick"; // Importing react-slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
+
+// Reviews data
 const reviews = [
   {
-    id: 1,
-    name: "Elba R",
+    name: "Elza R",
     location: "New York, USA",
     review:
-      "Navigating my husband's chronic illness felt overwhelming until we joined Cline. Our MVR has been with us every step of the way, ensuring we make informed decisions.",
-    image: "https://via.placeholder.com/150",
+      "Navigating my husband's chronic illness felt overwhelming until we joined Cliniva. Our MVR has been with us every step of the way, ensuring we make informed decisions.",
     rating: 5,
+    image: "https://i.ibb.co.com/YDBLTZF/Street.jpg", // Replace with your image path
   },
   {
-    id: 2,
     name: "John D",
-    location: "California, USA",
+    location: "Los Angeles, USA",
     review:
-      "Amazing service! Cline helped us find clarity during challenging times and provided the best solutions for my family.",
-    image: "https://via.placeholder.com/150",
-    rating: 4,
+      "The experience has been nothing short of life-changing. With Cliniva, we felt secure.",
+    rating: 5,
+    image: "https://i.ibb.co.com/YDBLTZF/Street.jpg", // Replace with your second image path
   },
+  {
+    name: "Jane M",
+    location: "Chicago, USA",
+    review:
+      "We have had such peace of mind thanks to Cliniva. Highly recommended for families!",
+    rating: 4,
+    image: "https://i.ibb.co.com/YDBLTZF/Street.jpg", // Replace with your third image path
+  },
+  // Add more reviews as needed
 ];
 
-const sliderSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: true,
+// Custom Arrow Component
+const CustomArrow = (props:any) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "flex", justifyContent:"center", alignItems: "center",  background: "#D3B5D3", padding:"20px", borderRadius: "50%" }}
+      onClick={onClick}
+    ></div>
+  );
 };
 
 const Review = () => {
-  return (
-    <section className="w-full px-5 py-20">
-      {/* Header Section */}
-      <div className="text-center space-y-3 mb-10">
-        <h1 className="text-4xl font-semibold text-[#32526B]">Some Reviews</h1>
-        <p className="text-gray-900">What Are People Saying About Us</p>
-      </div>
+  // Settings for react-slick
+  const settings = {
+    dots: false, // No pagination dots
+    infinite: true, // Infinite looping of slides
+    speed: 500, // Transition speed
+    slidesToShow: 1, // Show 1 slide at a time on mobile
+    slidesToScroll: 1, // Scroll 1 slide at a time
+    arrows: true, // Enable arrows
+    nextArrow: <CustomArrow  />, // Custom next arrow
+    prevArrow: <CustomArrow />, // Custom previous arrow
+    responsive: [
+      {
+        breakpoint: 768, // Tablet view
+        settings: {
+          slidesToShow: 2, // Show 2 reviews at a time on tablets
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024, // Desktop view
+        settings: {
+          slidesToShow: 3, // Show 3 reviews at a time on desktop
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
+  return (
+    <section className="w-full px-5 py-16">
       <MainContainer>
-        <Slider {...sliderSettings}>
-          {reviews.map((review) => (
-            <div key={review.id}>
-              <div className="w-full flex bg-[#D3B5D3]">
-                <div className="flex bg-yellow-400 rounded-xl">
-                  <div className="size-40 p-5">
+        <div className="p-8">
+          <h2 className="text-3xl font-bold text-center text-gray-800">
+            Some Reviews
+          </h2>
+          <h3 className="text-lg text-center text-gray-600 mb-10">
+            What Are People Saying About Us
+          </h3>
+
+          {/* React Slick Slider */}
+          <Slider {...settings}>
+            {reviews.map((review, index) => (
+              <div key={index} className="w-full  px-4">
+                <div className="w-full flex items-center">
+                  <div className="w-[13%] h-[520px] bg-[#D3B5D3] rounded-xl sticky"></div>
+                  <div className="w-[87%] h-full flex items-center gap-10 z-50 -ml-10">
                     <Image
-                      width={100}
-                      height={100}
+                      width={300}
+                      height={300}
                       src={review.image}
-                      alt={review.name}
-                      className="rounded-xl object-cover w-full h-full"
+                      alt="image"
+                      className="rounded-xl"
                     />
-                  </div>
-                  <div className="w-2/3 p-5 space-y-4">
-                    <h2 className="text-2xl font-bold text-gray-800">
-                      {review.name}
-                    </h2>
-                    <p className="text-gray-500">{review.location}</p>
-                    <p className="text-gray-700 italic">"{review.review}"</p>
-                    <div className="flex">
-                      {Array.from({ length: review.rating }).map((_, index) => (
-                        <span key={index} className="text-blue-400 text-xl">
-                          ★
-                        </span>
-                      ))}
-                      {Array.from({ length: 5 - review.rating }).map(
-                        (_, index) => (
-                          <span key={index} className="text-gray-300 text-xl">
-                            ★
-                          </span>
-                        )
-                      )}
+                    <div>
+                      <h4 className="text-3xl font-semibold text-gray-800">
+                        {review.name}
+                      </h4>
+                      <h1 className="text-gray-500">{review.location}</h1>
+                      <p className="mt-4 text-gray-700">{review.review}</p>
+                      <div className="mt-4 text-yellow-500 text-2xl">
+                        {"★".repeat(review.rating)}
+                        {"☆".repeat(5 - review.rating)}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </MainContainer>
     </section>
   );
