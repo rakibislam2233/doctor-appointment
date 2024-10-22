@@ -10,7 +10,7 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <section className="w-full h-full  bg-[#F1F9FF] p-5">
-      <MainContainer className="py-8 grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
+      <MainContainer className="py-10 grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
         {/* Left side: Heading, Text, and Button */}
         <div className="w-full space-y-10">
           {/* Hero title */}
@@ -41,7 +41,7 @@ const HeroSection = () => {
                 className="mx-auto"
               />
             </div>
-            <div className="absolute left-28 -bottom-12">
+            <div className="absolute left-28 -bottom-14">
               <Image
                 width={330}
                 height={300}

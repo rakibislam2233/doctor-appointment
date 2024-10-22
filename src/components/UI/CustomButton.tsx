@@ -5,9 +5,6 @@ import React from "react";
 interface CustomButtonProps {
   children: React.ReactNode;
   className?: string;
-  border?: boolean;
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
-  onChange?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({

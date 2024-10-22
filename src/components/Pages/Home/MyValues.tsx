@@ -32,7 +32,7 @@ const MyValues = () => {
     },
   ];
   return (
-    <div className="w-full bg-[#FAF6FA] py-12 my-16 p-5">
+    <div className="w-full bg-[#FAF6FA] py-16 my-16 p-5">
       <MainContainer>
         <div className="text-center space-y-3">
           <h1 className="text-4xl font-semibold text-[#32526B]">My Values</h1>

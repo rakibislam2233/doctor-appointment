@@ -36,7 +36,7 @@ const sliderSettings = {
 
 const Review = () => {
   return (
-    <section className="w-full px-5 py-16">
+    <section className="w-full px-5 py-20">
       {/* Header Section */}
       <div className="text-center space-y-3 mb-10">
         <h1 className="text-4xl font-semibold text-[#32526B]">Some Reviews</h1>
@@ -46,28 +46,38 @@ const Review = () => {
       <MainContainer>
         <Slider {...sliderSettings}>
           {reviews.map((review) => (
-            <div key={review.id} className="flex items-center justify-center p-10">
-              <div className="flex bg-white rounded-xl shadow-lg w-2/3">
-                <div className="w-1/3 p-5">
-                  <Image
-                  width={500}
-                  height={500}
-                    src={review.image}
-                    alt={review.name}
-                    className="rounded-xl object-cover w-full h-full"
-                  />
-                </div>
-                <div className="w-2/3 p-5 space-y-4">
-                  <h2 className="text-2xl font-bold text-gray-800">{review.name}</h2>
-                  <p className="text-gray-500">{review.location}</p>
-                  <p className="text-gray-700 italic">"{review.review}"</p>
-                  <div className="flex">
-                    {Array.from({ length: review.rating }).map((_, index) => (
-                      <span key={index} className="text-blue-400 text-xl">★</span>
-                    ))}
-                    {Array.from({ length: 5 - review.rating }).map((_, index) => (
-                      <span key={index} className="text-gray-300 text-xl">★</span>
-                    ))}
+            <div key={review.id}>
+              <div className="w-full flex bg-[#D3B5D3]">
+                <div className="flex bg-yellow-400 rounded-xl">
+                  <div className="size-40 p-5">
+                    <Image
+                      width={100}
+                      height={100}
+                      src={review.image}
+                      alt={review.name}
+                      className="rounded-xl object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="w-2/3 p-5 space-y-4">
+                    <h2 className="text-2xl font-bold text-gray-800">
+                      {review.name}
+                    </h2>
+                    <p className="text-gray-500">{review.location}</p>
+                    <p className="text-gray-700 italic">"{review.review}"</p>
+                    <div className="flex">
+                      {Array.from({ length: review.rating }).map((_, index) => (
+                        <span key={index} className="text-blue-400 text-xl">
+                          ★
+                        </span>
+                      ))}
+                      {Array.from({ length: 5 - review.rating }).map(
+                        (_, index) => (
+                          <span key={index} className="text-gray-300 text-xl">
+                            ★
+                          </span>
+                        )
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
