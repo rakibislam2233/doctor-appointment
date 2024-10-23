@@ -1,19 +1,9 @@
 import React from "react";
-import {
-  HomeOutlined,
-  PhoneOutlined,
-  MailOutlined,
-  CalendarOutlined,
-} from "@ant-design/icons";
+import { HomeOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomBreadcrumb from "@/components/UI/CustomBreadcrumb";
 import profileImage from "@/assets/hero-section/nurse.png"; // Add your profile image path
-import {
-  LinkedinOutlined,
-  TwitterOutlined,
-  FacebookOutlined,
-} from "@ant-design/icons";
 import circle from "@/assets/hero-section/circle.png";
 import Link from "next/link";
 import { FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
@@ -21,13 +11,13 @@ import {
   MdLocalPhone,
   MdOutlineCalendarMonth,
   MdOutlineEmail,
-  MdOutlineLockClock,
   MdOutlineTimer,
   MdSchool,
   MdStar,
   MdWork,
 } from "react-icons/md";
 import CustomButton from "@/components/UI/CustomButton";
+import { FaAward } from "react-icons/fa";
 const breadcrumbItems = [
   {
     href: "/",
@@ -47,7 +37,7 @@ const AboutMe = () => {
   return (
     <section className="w-full px-5 py-10">
       <MainContainer>
-        <CustomBreadcrumb items={breadcrumbItems} />
+      <CustomBreadcrumb items={breadcrumbItems} />
         <div className="w-full hidden lg:block p-36 my-5 rounded-xl bg-[#F1F9FF]"></div>
         {/* Main content container */}
         <div className="w-full md:w-[80%] mx-auto flex flex-col lg:flex-row gap-20 mt-10">
@@ -144,7 +134,7 @@ const AboutMe = () => {
 
           {/* Right Section (Doctor Info and Biography) */}
           <div className="w-full md:w-[600px] mx-auto rounded-xl -mt-0 lg:-mt-56">
-            <div className="space-y-14 text-[#274760]">
+            <div className="space-y-16 text-[#274760]">
               {/* Header Section */}
               <div className="space-y-4">
                 <h1 className="text-4xl font-semibold">
@@ -224,17 +214,16 @@ const AboutMe = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
-                      <h1 className="font-semibold text-[#32526B]">
-                        Expertise in the treatment of mood disorders, anxiety
-                        disorders, and psychotic disorders.
-                      </h1>
-                   
+                    <h1 className="font-semibold text-[#32526B]">
+                      Expertise in the treatment of mood disorders, anxiety
+                      disorders, and psychotic disorders.
+                    </h1>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
-                      <h1 className="font-semibold text-[#32526B]">
-                        Complex Case Management
-                      </h1>
+                    <h1 className="font-semibold text-[#32526B]">
+                      Complex Case Management
+                    </h1>
                   </li>
                 </ul>
               </div>
@@ -242,7 +231,7 @@ const AboutMe = () => {
               {/* Awards/Achievements Section */}
               <div>
                 <h3 className="font-bold text-2xl mb-3 text-[#32526B] flex items-center gap-3">
-                  <MdStar color="#77C4FE" size={32} /> Awards/Achievements
+                  <FaAward color="#77C4FE" size={32} /> Awards/Achievements
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">
@@ -254,12 +243,11 @@ const AboutMe = () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                  <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="text-xl font-semibold text-[#32526B]">
                         Research Contributions
                       </h1>
-
                     </div>
                   </li>
                 </ul>
