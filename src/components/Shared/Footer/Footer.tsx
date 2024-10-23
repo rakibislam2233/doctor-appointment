@@ -1,4 +1,5 @@
 import { MdLocalPhone, MdLocationOn, MdOutlineEmail } from "react-icons/md";
+import logo from '@/assets/logo/logo.png'
 import Image from "next/image";
 import { FiFacebook, FiLinkedin } from "react-icons/fi";
 import { PiWhatsappLogo } from "react-icons/pi";
@@ -10,8 +11,8 @@ const Footer = () => {
       <MainContainer className="space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 ">
           <div className="space-y-4 text-center md:text-start">
-            <div className="w-[160px] h-[100px] relative mx-auto md:mx-0 bg-yellow-300">
-              {/* <Image fill src={logo} alt="logo" /> */}
+            <div className="size-[80px] relative mx-auto md:mx-0">
+              <Image fill src={logo} alt="logo" />
             </div>
             <div className="space-y-2">
               <h1 className="text-2xl font-semibold text-white">
