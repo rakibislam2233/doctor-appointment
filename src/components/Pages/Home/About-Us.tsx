@@ -8,7 +8,7 @@ import CustomButton from "@/components/UI/CustomButton";
 const AboutUs = () => {
   return (
     <section className="w-full px-5 py-16">
-      <MainContainer className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <MainContainer className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Right section with text content (first on mobile, second on larger screens) */}
         <div className="w-full h-full flex items-center bg-cover bg-center order-1 md:order-2" 
           style={{ backgroundImage: `url(${about3.src})` }}>
@@ -37,12 +37,12 @@ const AboutUs = () => {
               src={about1}
               alt="Doctor"
               className="rounded-lg"
-              width={500}
+              width={600}
               height={500}
               objectFit="cover"
             />
             {/* Circular overlay image of the nurse */}
-            <div className="absolute  left-1/2 md:left-[50%] transform -translate-x-1/2 md:translate-x-0 bottom-4 w-32 h-32 md:w-64 md:h-64 overflow-hidden">
+            <div className="absolute  left-1/2 md:left-[50%] transform -translate-x-1/2 md:translate-x-0 bottom-4 size-40 md:size-96 overflow-hidden">
               <Image
                 src={about2}
                 alt="Nurse smiling"

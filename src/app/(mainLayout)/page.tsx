@@ -3,6 +3,7 @@ import Faq from "@/components/Pages/Home/Faq";
 import HeroSection from "@/components/Pages/Home/HeroSection";
 import MyValues from "@/components/Pages/Home/MyValues";
 import Pricing from "@/components/Pages/Home/Pricing";
+import RecentBlogs from "@/components/Pages/Home/RecentBlogs";
 import Review from "@/components/Pages/Home/Review";
 
 const MainPage = () => {
@@ -14,6 +15,7 @@ const MainPage = () => {
       <Pricing/>
       <Review/>
       <Faq/>
+      <RecentBlogs/>
     </>
   );
 };
