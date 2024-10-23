@@ -1,26 +1,26 @@
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
-import RecentBlogCard from "./RecentBlogCard";
 import CustomButton from "@/components/UI/CustomButton";
+import RecentBlogCard from "./RecentBlogCard";
 
 // Array of blog objects
 const blogs = [
   {
     id: 1,
-    imgSrc: "https://i.ibb.co.com/nM71Lx8/Digital-Art.jpg",
+    imgSrc: "https://i.ibb.co.com/pPLwnRq/blog3.png",
     date: "June 23, 2024",
     description:
       "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
   },
   {
     id: 2,
-    imgSrc: "https://i.ibb.co.com/nM71Lx8/Digital-Art.jpg",
+    imgSrc: "https://i.ibb.co.com/pPLwnRq/blog3.png",
     date: "June 23, 2024",
     description:
       "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
   },
   {
     id: 3,
-    imgSrc: "https://i.ibb.co.com/nM71Lx8/Digital-Art.jpg",
+    imgSrc: "https://i.ibb.co.com/pPLwnRq/blog3.png",
     date: "June 23, 2024",
     description:
       "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
@@ -45,9 +45,7 @@ const RecentBlogs = () => {
 
         {/* View All Button */}
         <div className="text-center mt-10 flex justify-end">
-          <CustomButton>
-            View All
-          </CustomButton>
+          <CustomButton>View All</CustomButton>
         </div>
       </MainContainer>
     </section>

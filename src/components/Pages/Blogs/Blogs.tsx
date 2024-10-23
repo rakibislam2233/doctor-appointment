@@ -20,56 +20,56 @@ const Blogs = () => {
   const blogs = [
     {
       id: 1,
-      imgSrc: "https://i.ibb.co.com/nM71Lx8/Digital-Art.jpg",
+      imgSrc: "https://i.ibb.co.com/pPLwnRq/blog3.png",
       date: "June 23, 2024",
       description:
         "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
     },
     {
       id: 2,
-      imgSrc: "https://i.ibb.co.com/nM71Lx8/Digital-Art.jpg",
+      imgSrc: "https://i.ibb.co.com/pPLwnRq/blog3.png",
       date: "June 23, 2024",
       description:
         "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
     },
     {
       id: 3,
-      imgSrc: "https://i.ibb.co.com/nM71Lx8/Digital-Art.jpg",
+      imgSrc: "https://i.ibb.co.com/pPLwnRq/blog3.png",
       date: "June 23, 2024",
       description:
         "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
     },
     {
       id: 4,
-      imgSrc: "https://i.ibb.co.com/nM71Lx8/Digital-Art.jpg",
+      imgSrc: "https://i.ibb.co.com/pPLwnRq/blog3.png",
       date: "June 23, 2024",
       description:
         "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
     },
     {
       id: 5,
-      imgSrc: "https://i.ibb.co.com/nM71Lx8/Digital-Art.jpg",
+      imgSrc: "https://i.ibb.co.com/pPLwnRq/blog3.png",
       date: "June 23, 2024",
       description:
         "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
     },
     {
       id: 6,
-      imgSrc: "https://i.ibb.co.com/nM71Lx8/Digital-Art.jpg",
+      imgSrc: "https://i.ibb.co.com/pPLwnRq/blog3.png",
       date: "June 23, 2024",
       description:
         "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
     },
     {
       id: 7,
-      imgSrc: "https://i.ibb.co.com/nM71Lx8/Digital-Art.jpg",
+      imgSrc: "https://i.ibb.co.com/pPLwnRq/blog3.png",
       date: "June 23, 2024",
       description:
         "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
     },
     {
       id: 8,
-      imgSrc: "https://i.ibb.co.com/nM71Lx8/Digital-Art.jpg",
+      imgSrc: "https://i.ibb.co.com/pPLwnRq/blog3.png",
       date: "June 23, 2024",
       description:
         "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
@@ -80,10 +80,10 @@ const Blogs = () => {
       <MainContainer>
         <CustomBreadcrumb items={breadcrumbItems} />
         <div className="text-center my-5">
-                <h1 className="text-4xl font-semibold text-[#32526B]">Blogs</h1>
-            <h1>What Are People Saying About Us</h1>
+          <h1 className="text-4xl font-semibold text-[#32526B]">Blogs</h1>
+          <h1>What Are People Saying About Us</h1>
         </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 py-10">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-10">
           {blogs.map((blog) => (
             <RecentBlogCard key={blog.id} blog={blog} />
           ))}
