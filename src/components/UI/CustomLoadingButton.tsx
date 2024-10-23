@@ -1,17 +1,9 @@
 /* eslint-disable react/prop-types */
-"use client";
-import React from "react";
-import { Button } from "antd";
-
-// Define types for props
-interface CustomLoadingButtonProps {
+"use client";interface CustomLoadingButtonProps {
   loading?: boolean;
-  hover?: boolean; // New hover prop
   children: React.ReactNode;
   className?: string;
-  border?: boolean;
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
-  onChange?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 const CustomLoadingButton: React.FC<CustomLoadingButtonProps> = ({
@@ -19,22 +11,26 @@ const CustomLoadingButton: React.FC<CustomLoadingButtonProps> = ({
   children,
   className = "",
   onClick,
-  onChange,
 }) => {
   return (
-    <Button
-      type="default"
-      htmlType="submit"
-      loading={loading}
-      className={`${className} w-full bg-[#77C4FE] flex px-10 py-6 justify-center items-center gap-5 text-white  transition-all duration-500`}
-      style={{
-        backgroundColor: "#77C4FE",
-      }}
-      onClick={onClick}
-      onChange={onChange}
-    >
-      {children}
-    </Button>
+    <div className={` w-full p-0.5 border-2 border-[#77C4FE] rounded-xl`}>
+      <button
+        type="submit"
+        className={`${className} w-full bg-[#77C4FE] ${loading ? 'opacity-75' : 'opacity-100'} flex px-5 py-3 rounded-lg justify-center items-center gap-5 text-white transition-all duration-500`}
+        onClick={onClick}
+        disabled={loading} // Disable button while loading
+      >
+        {loading ? (
+          // Custom loading spinner design
+          <div className="flex items-center gap-3">
+            <div className="w-5 h-5 border-2 border-dashed border-t-transparent border-white rounded-full animate-spin"></div>
+           {children}
+          </div>
+        ) : (
+          children
+        )}
+      </button>
+    </div>
   );
 };
 
