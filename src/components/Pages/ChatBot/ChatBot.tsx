@@ -3,9 +3,8 @@ import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomBreadcrumb from "@/components/UI/CustomBreadcrumb";
 import CustomInput from "@/components/UI/CustomInput";
 import CustomLoadingButton from "@/components/UI/CustomLoadingButton";
-import { HomeOutlined, UserOutlined } from "@ant-design/icons";
+import { HomeOutlined, MailOutlined, UserOutlined } from "@ant-design/icons";
 import { Form } from "antd";
-import { MdEmail } from "react-icons/md";
 const ChatBot = () => {
   const breadcrumbItems = [
     {
@@ -45,7 +44,7 @@ const ChatBot = () => {
                 name="email"
                 label="Your Email"
                 placeholder="Email"
-                icon={MdEmail}
+                icon={MailOutlined}
               />
               <CustomInput
                 name="message"
