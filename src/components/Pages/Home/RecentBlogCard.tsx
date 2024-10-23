@@ -16,7 +16,7 @@ const RecentBlogCard = (blog: RecentBlogCardProps) => {
   return (
     <div className="w-full bg-[#F1F9FF] p-5 rounded-xl shadow-lg">
       {/* Blog Image */}
-      <div className="w-full h-96 relative">
+      <div className="w-full h-56 md:h-96 relative">
         <Image
           src={blog.blog.imgSrc}
           alt="Blog Image"
