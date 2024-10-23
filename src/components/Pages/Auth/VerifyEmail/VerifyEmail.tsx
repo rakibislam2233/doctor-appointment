@@ -78,7 +78,7 @@ const VerifyEmail = () => {
           </div>
 
           {/* Submit Button */}
-          <div className="mt-5">
+          <div className="mt-8">
             <CustomLoadingButton onClick={handleVerify} loading={loading}>
               Verify
             </CustomLoadingButton>

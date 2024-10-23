@@ -63,9 +63,12 @@ const ForgotPassword = () => {
             />
             {/* Submit Button */}
             <Form.Item>
+            <div className="mt-2">
+
               <CustomLoadingButton loading={loading}>
                 Get Otp
               </CustomLoadingButton>
+              </div>
             </Form.Item>
           </Form>
         </div>

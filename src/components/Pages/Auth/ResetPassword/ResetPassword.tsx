@@ -86,9 +86,11 @@ const ResetPassword = () => {
 
             {/* Submit Button */}
             <Form.Item>
-              <CustomLoadingButton loading={loading}>
+            <div className="mt-5">
+            <CustomLoadingButton loading={loading}>
                 Reset Password
               </CustomLoadingButton>
+            </div>
             </Form.Item>
           </Form>
         </div>
