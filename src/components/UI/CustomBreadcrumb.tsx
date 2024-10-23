@@ -9,22 +9,17 @@ interface BreadcrumbItem {
 }
 
 interface CustomBreadcrumbProps {
-  items: BreadcrumbItem[];
-  className?: string;
+  items: BreadcrumbItem[]; // Items array for the breadcrumb
 }
 
-const CustomBreadcrumb: React.FC<CustomBreadcrumbProps> = ({
-  items,
-  className,
-}) => {
+const CustomBreadcrumb: React.FC<CustomBreadcrumbProps> = ({ items }) => {
+  // Map through the items and format them for the Ant Design `items` prop
+  const breadcrumbItems = items.map((item) => ({
+    title: item.href ? <Link  href={item.href}>{item.title}</Link> : item.title,
+  }));
+
   return (
-    <Breadcrumb className={className}>
-      {items.map((item, index) => (
-        <Breadcrumb.Item key={index} className="text-lg">
-          {item.href ? <Link href={item.href}>{item.title}</Link> : item.title}
-        </Breadcrumb.Item>
-      ))}
-    </Breadcrumb>
+    <Breadcrumb className="text-lg" items={breadcrumbItems} />
   );
 };
 

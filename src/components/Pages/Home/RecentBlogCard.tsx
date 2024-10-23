@@ -6,6 +6,7 @@ import { FiCalendar, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
 interface RecentBlogCardProps {
   key: number;
   blog: {
+    id:number,
     imgSrc: string;
     date: string;
     description: string;
@@ -59,7 +60,7 @@ const RecentBlogCard = (blog: RecentBlogCardProps) => {
         <p className="text-gray-700">{blog.blog.description}</p>
 
         {/* Read More Link */}
-        <Link href="#" className="text-[#32526B] font-semibold underline">
+        <Link href={`/blog/${blog.blog.id}`} className="text-[#32526B] font-semibold underline">
           Read More
         </Link>
       </div>
