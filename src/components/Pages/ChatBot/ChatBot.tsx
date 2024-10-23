@@ -1,12 +1,10 @@
 "use client";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomBreadcrumb from "@/components/UI/CustomBreadcrumb";
-import CustomButton from "@/components/UI/CustomButton";
 import CustomInput from "@/components/UI/CustomInput";
 import CustomLoadingButton from "@/components/UI/CustomLoadingButton";
-import { HomeOutlined, SettingOutlined, UserOutlined } from "@ant-design/icons";
+import { HomeOutlined, UserOutlined } from "@ant-design/icons";
 import { Form } from "antd";
-import { Input } from "postcss";
 import { MdEmail } from "react-icons/md";
 const ChatBot = () => {
   const breadcrumbItems = [

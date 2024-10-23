@@ -1,8 +1,8 @@
 import AboutUs from "@/components/Pages/Home/About-Us";
 import Faq from "@/components/Pages/Home/Faq";
 import HeroSection from "@/components/Pages/Home/HeroSection";
+import HomePricing from "@/components/Pages/Home/HomePricing";
 import MyValues from "@/components/Pages/Home/MyValues";
-import Pricing from "@/components/Pages/Home/Pricing";
 import RecentBlogs from "@/components/Pages/Home/RecentBlogs";
 import Review from "@/components/Pages/Home/Review";
 import { Metadata } from "next";
@@ -15,12 +15,12 @@ const MainPage = () => {
   return (
     <>
       <HeroSection />
-      <MyValues/>
-      <AboutUs/>
-      <Pricing/>
-      <Review/>
-      <Faq/>
-      <RecentBlogs/>
+      <MyValues />
+      <AboutUs />
+      <HomePricing />
+      <Review />
+      <Faq />
+      <RecentBlogs />
     </>
   );
 };

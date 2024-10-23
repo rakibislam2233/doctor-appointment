@@ -1,7 +1,7 @@
 import CustomButton from "@/components/UI/CustomButton";
 import { IoCheckmarkOutline } from "react-icons/io5";
 
-const Pricing = () => {
+const HomePricing = () => {
   return (
     <section className="w-full bg-[#F4FCF8] px-5 py-20">
       {/* Header Section */}
@@ -167,4 +167,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default HomePricing;
