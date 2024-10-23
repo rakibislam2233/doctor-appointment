@@ -1,3 +1,4 @@
+import Footer from "@/components/Shared/Footer/Footer";
 import Header from "@/components/Shared/Header/Header";
 import React from "react";
 
@@ -7,9 +8,9 @@ interface IChildren {
 const MainLayout = ({ children }: IChildren) => {
   return (
     <main>
-     <Header/>
+      <Header />
       {children}
-      <footer>&copy; 2024 Doctor Appointment. All rights reserved.</footer>
+      <Footer />
     </main>
   );
 };
