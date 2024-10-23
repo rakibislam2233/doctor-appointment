@@ -36,8 +36,17 @@ const reviews = [
 ];
 
 // Custom Arrow Component
-const CustomArrow = (props: any) => {
-  const { className, style, onClick } = props;
+interface CustomArrowProps {
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
+}
+
+const CustomArrow: React.FC<CustomArrowProps> = ({
+  className,
+  style,
+  onClick,
+}) => {
   return (
     <div
       className={className}
@@ -100,14 +109,14 @@ const Review = () => {
               <div className="w-full flex items-center">
                 <div className=" hidden md:block w-[13%] h-[520px] bg-[#D3B5D3] rounded-xl"></div>
                 <div className="w-full md:w-[87%] h-full flex flex-col md:flex-row items-center gap-10 md:z-50 -ml-0 md:-ml-10">
-                 <div className="w-full h-[300px] md:w-[300px] relative">
-                 <Image
-                    fill
-                    src={review.image}
-                    alt="image"
-                    className="rounded-xl absolute"
-                  />
-                 </div>
+                  <div className="w-full h-[300px] md:w-[400px] md:h-[400px] relative">
+                    <Image
+                      fill
+                      src={review.image}
+                      alt="image"
+                      className="rounded-xl absolute"
+                    />
+                  </div>
                   <div>
                     <h4 className="text-3xl font-semibold text-gray-800">
                       {review.name}
