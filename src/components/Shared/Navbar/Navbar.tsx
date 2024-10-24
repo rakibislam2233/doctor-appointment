@@ -28,6 +28,10 @@ const navLinks = [
         href: "/about-me",
     },
     {
+        label: "Team Members",
+        href: "/team-members"
+    },
+    {
         label: "FAQ",
         href: "/faq",
     },
