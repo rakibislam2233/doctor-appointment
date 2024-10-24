@@ -35,17 +35,10 @@ const CustomInput: React.FC<
   return (
     <Form.Item
       name={name}
+      label={label && <span className="text-lg">{label}</span>}
       rules={rules}
-      className="custom-form-item" // Apply custom form styles
     >
       <div className="w-full">
-        {/* Dynamic Label */}
-        {label && (
-          <label className="block mb-3 text-gray-700 text-sm font-medium">
-            {label}
-          </label>
-        )}
-
         <div className="relative">
           {/* Render TextArea if isTextArea is true */}
           {isTextArea ? (

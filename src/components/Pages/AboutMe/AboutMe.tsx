@@ -36,7 +36,7 @@ const AboutMe = () => {
   return (
     <section className="w-full px-5 py-10">
       <MainContainer>
-      <CustomBreadcrumb items={breadcrumbItems} />
+        <CustomBreadcrumb items={breadcrumbItems} />
         <div className="w-full hidden lg:block p-36 my-5 rounded-xl bg-[#F1F9FF]"></div>
         {/* Main content container */}
         <div className="w-full md:w-[80%] mx-auto flex flex-col lg:flex-row gap-20 mt-10">
@@ -127,7 +127,9 @@ const AboutMe = () => {
               </div>
             </div>
             <div className="flex justify-end items-center my-5">
-              <CustomButton>Book an appointment</CustomButton>
+              <Link href={"/appointment"}>
+                <CustomButton>Book an appointment</CustomButton>
+              </Link>
             </div>
           </div>
 
