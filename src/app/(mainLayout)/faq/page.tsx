@@ -23,7 +23,6 @@ const page = () => {
         <CustomBreadcrumb items={breadcrumbItems} />
         <Faq />
       </MainContainer>
-      r
     </section>
   );
 };

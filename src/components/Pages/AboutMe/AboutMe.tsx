@@ -13,7 +13,6 @@ import {
   MdOutlineEmail,
   MdOutlineTimer,
   MdSchool,
-  MdStar,
   MdWork,
 } from "react-icons/md";
 import CustomButton from "@/components/UI/CustomButton";

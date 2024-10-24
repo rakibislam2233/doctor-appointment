@@ -10,7 +10,6 @@ import OTPInput from "react-otp-input";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 
-
 const VerifyEmail = () => {
   const { email } = useParams();
   const [otp, setOtp] = useState<string>(""); // Explicitly set the OTP as a string
@@ -30,7 +29,7 @@ const VerifyEmail = () => {
     setTimeout(() => {
       if (otp.length === 6) {
         // Assuming successful OTP verification
-        console.log("OTP Verified:", otp);
+        console.log("OTP Verified:", email, otp);
         router.push("/reset-password"); // Navigate to reset password page
       } else {
         alert("Invalid OTP. Please enter a valid code.");
@@ -69,10 +68,10 @@ const VerifyEmail = () => {
                 height: "3rem",
                 margin: "0 0.5rem",
                 fontSize: "2rem",
-                fontWeight:"bold",
+                fontWeight: "bold",
                 borderBottom: "1px solid #4E4E4E",
                 textAlign: "center",
-                outline: "none", 
+                outline: "none",
               }}
             />
           </div>

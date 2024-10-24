@@ -2,6 +2,7 @@
 import React from "react";
 import { Input, Form } from "antd";
 import { InputProps, TextAreaProps } from "antd/lib/input"; // Import InputProps and TextAreaProps for additional props
+import { Rule } from "antd/lib/form"; // Import Rule for form validation rules
 
 // Define the props for CustomInput
 interface CustomInputProps {
@@ -13,11 +14,13 @@ interface CustomInputProps {
   isPassword?: boolean; // Boolean to indicate if it's a password input
   isTextArea?: boolean; // Boolean to indicate if it's a TextArea input
   name: string; // Name is required for validation and Form.Item
-  rules?: any[]; // Validation rules for the form
+  rules?: Rule[]; // Validation rules with proper type Rule[]
 }
 
 // Conditionally apply InputProps or TextAreaProps based on isTextArea
-const CustomInput: React.FC<CustomInputProps & (InputProps | TextAreaProps)> = ({
+const CustomInput: React.FC<
+  CustomInputProps & (InputProps | TextAreaProps)
+> = ({
   icon: Icon, // Dynamic icon component
   label, // Label text
   placeholder, // Placeholder text
@@ -47,7 +50,7 @@ const CustomInput: React.FC<CustomInputProps & (InputProps | TextAreaProps)> = (
           {/* Render TextArea if isTextArea is true */}
           {isTextArea ? (
             <Input.TextArea
-            autoSize={{ minRows: 7, maxRows: 10 }}
+              autoSize={{ minRows: 7, maxRows: 10 }}
               placeholder={placeholder || "Enter text"}
               className={`w-full border border-[#77C4FE] px-4 py-2 text-[16px] bg-[#F3FAFF] text-gray-700 rounded-lg focus:border-[#77C4FE] ${className}`}
               {...(rest as TextAreaProps)} // Spread TextAreaProps if isTextArea

@@ -36,6 +36,7 @@ const BlogDetails = (props: BlogDetailsProps) => {
     description:
       "Lorem ipsum dolor sit amet consectetur. Convallis cras placerat dignissim aliquam massa.",
   };
+  console.log(blogId)
   return (
     <section className="w-full px-5 py-10">
       <MainContainer>

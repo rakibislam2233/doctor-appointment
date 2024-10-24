@@ -7,15 +7,21 @@ import nurseImage from "@/assets/hero-section/nurse.png";
 import circle from "@/assets/hero-section/circle.png";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomLoadingButton from "@/components/UI/CustomLoadingButton";
-import React from "react";
+import React, { useState } from "react";
 import CustomInput from "@/components/UI/CustomInput";
 
-const ResetPassword = () => {
-  const [loading, setLoading] = React.useState(false);
+// Define form values interface
+interface ResetPasswordFormValues {
+  new_password: string;
+  confirm_password: string;
+}
+
+const ResetPassword: React.FC = () => {
+  const [loading, setLoading] = useState<boolean>(false);
   const [form] = Form.useForm(); // Hook for handling form
 
   // Handle form submission
-  const onFinish = (values: any) => {
+  const onFinish = (values: ResetPasswordFormValues) => {
     setLoading(true);
     // Simulate a network request
     setTimeout(() => {
@@ -25,7 +31,7 @@ const ResetPassword = () => {
   };
 
   // Validator for confirming password
-  const validateConfirmPassword = (_: any, value: string) => {
+  const validateConfirmPassword = (_: unknown, value: string) => {
     if (value && value !== form.getFieldValue("new_password")) {
       return Promise.reject(new Error("Passwords do not match!"));
     }
@@ -42,12 +48,12 @@ const ResetPassword = () => {
             <div className="size-[80px] relative mx-auto md:mx-0">
               <Image fill src={logo} alt="logo" />
             </div>
-            <h2 className="text-3xl font-semibold ">Reset Password!</h2>
+            <h2 className="text-3xl font-semibold">Reset Password!</h2>
             <p className="text-gray-500">
               Your password must be 8-10 characters long.
             </p>
           </div>
-          <Form
+          <Form<ResetPasswordFormValues>
             form={form} // Connect the form instance to Ant Design's form hook
             name="reset-password"
             onFinish={onFinish}
@@ -86,11 +92,11 @@ const ResetPassword = () => {
 
             {/* Submit Button */}
             <Form.Item>
-            <div className="mt-5">
-            <CustomLoadingButton loading={loading}>
-                Reset Password
-              </CustomLoadingButton>
-            </div>
+              <div className="mt-5">
+                <CustomLoadingButton loading={loading}>
+                  Reset Password
+                </CustomLoadingButton>
+              </div>
             </Form.Item>
           </Form>
         </div>
