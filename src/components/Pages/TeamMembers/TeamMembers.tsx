@@ -6,6 +6,7 @@ import TeamMemberCard from "./TeamMemberCard";
 
 // Define the TeamMember type (if it's not globally defined already)
 interface TeamMember {
+  id: number;
   name: string;
   degree: string;
   specialty: string;
@@ -15,72 +16,84 @@ interface TeamMember {
 // Sample data for team members
 const teamMembers: TeamMember[] = [
   {
+    id: 1,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",
     imageUrl: "https://i.ibb.co.com/87g3Kwr/doctor.png", // Replace with the actual image URL
   },
   {
+    id: 2,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",
     imageUrl: "https://i.ibb.co.com/87g3Kwr/doctor.png",
   },
   {
+    id: 3,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",
     imageUrl: "https://i.ibb.co.com/87g3Kwr/doctor.png",
   },
   {
+    id: 4,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",
     imageUrl: "https://i.ibb.co.com/87g3Kwr/doctor.png",
   },
   {
+    id: 5,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",
     imageUrl: "https://i.ibb.co.com/87g3Kwr/doctor.png",
   },
   {
+    id: 6,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",
     imageUrl: "https://i.ibb.co.com/87g3Kwr/doctor.png",
   },
   {
+    id: 7,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",
     imageUrl: "https://i.ibb.co.com/87g3Kwr/doctor.png",
   },
   {
+    id: 8,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",
     imageUrl: "https://i.ibb.co.com/87g3Kwr/doctor.png",
   },
   {
+    id: 9,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",
     imageUrl: "https://i.ibb.co.com/87g3Kwr/doctor.png",
   },
   {
+    id: 10,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",
     imageUrl: "https://i.ibb.co.com/87g3Kwr/doctor.png",
   },
   {
+    id: 11,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",
     imageUrl: "https://i.ibb.co.com/87g3Kwr/doctor.png",
   },
   {
+    id: 12,
     name: "Dr. Rakib  Islam",
     degree: "MBBS, MCPS, MD",
     specialty: "General surgery",

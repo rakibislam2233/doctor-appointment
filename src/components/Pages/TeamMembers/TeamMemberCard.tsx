@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Define the TeamMember type
 interface TeamMember {
+  id: number;
   name: string;
   degree: string;
   specialty: string;
@@ -13,12 +15,14 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
     <div className="bg-[#EEE2EE] shadow-lg rounded-xl overflow-hidden p-3">
       {/* Profile Image */}
       <div className="relative w-full h-96 rounded-t-xl">
-        <Image
-          src={member.imageUrl}
-          alt={member.name}
-          layout="fill"
-          objectFit="cover"
-        />
+        <Link href={`/team-members/${member.id}`}>
+          <Image
+            src={member.imageUrl}
+            alt={member.name}
+            layout="fill"
+            objectFit="cover"
+          />
+        </Link>
       </div>
 
       {/* Profile Info */}
@@ -30,8 +34,17 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
         <div className="mt-2 flex justify-between items-center">
           <p className="text-gray-600 ">Specialties</p>
           <div className="relative">
-          <Image width={180} height={120} src="https://i.ibb.co.com/R64gCDv/Rectangle-18831.png" alt="image" className="relative "/>
-          <span className="absolute top-2 left-8 text-white"> {member.specialty}</span>
+            <Image
+              width={180}
+              height={120}
+              src="https://i.ibb.co.com/R64gCDv/Rectangle-18831.png"
+              alt="image"
+              className="relative "
+            />
+            <span className="absolute top-2 left-8 text-white">
+              {" "}
+              {member.specialty}
+            </span>
           </div>
         </div>
       </div>
