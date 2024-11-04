@@ -54,19 +54,16 @@ const ResetPassword: React.FC = () => {
             </p>
           </div>
           <Form<ResetPasswordFormValues>
-            form={form} // Connect the form instance to Ant Design's form hook
+            form={form}
             name="reset-password"
             onFinish={onFinish}
             className="space-y-3 mt-5"
             layout="vertical"
           >
-            {/* New Password Input */}
-            <CustomInput
+            {/* New Password Input Wrapped in Form.Item */}
+            <Form.Item
               name="new_password"
               label="New Password"
-              icon={LockOutlined}
-              isPassword={true}
-              placeholder="Enter your new password"
               rules={[
                 { required: true, message: "Please input your new password!" },
                 {
@@ -75,20 +72,29 @@ const ResetPassword: React.FC = () => {
                   message: "Password must be between 8-10 characters!",
                 },
               ]}
-            />
+            >
+              <CustomInput
+                icon={LockOutlined}
+                isPassword={true}
+                placeholder="Enter your new password"
+              />
+            </Form.Item>
 
-            {/* Confirm Password Input */}
-            <CustomInput
+            {/* Confirm Password Input Wrapped in Form.Item */}
+            <Form.Item
               name="confirm_password"
               label="Confirm Password"
-              icon={LockOutlined}
-              isPassword={true}
-              placeholder="Confirm your password"
               rules={[
                 { required: true, message: "Please confirm your password!" },
-                { validator: validateConfirmPassword }, // Custom validator to match passwords
+                { validator: validateConfirmPassword },
               ]}
-            />
+            >
+              <CustomInput
+                icon={LockOutlined}
+                isPassword={true}
+                placeholder="Confirm your password"
+              />
+            </Form.Item>
 
             {/* Submit Button */}
             <Form.Item>

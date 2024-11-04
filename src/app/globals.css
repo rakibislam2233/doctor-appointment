@@ -10,3 +10,12 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.ant-select-selector {
+  border: none !important; /* Removes border */
+  box-shadow: none !important; /* Removes box-shadow underline */
+}
+
+.ant-select-focused .ant-select-selector {
+  outline: none !important; /* Ensures no outline on focus */
+}

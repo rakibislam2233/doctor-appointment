@@ -62,56 +62,71 @@ const Register: React.FC = () => {
             className="space-y-3 mt-5"
             layout="vertical"
           >
-            {/* Name Input */}
-            <CustomInput
+            {/* Name Input Wrapped in Form.Item */}
+            <Form.Item
               name="name"
               label="Name"
-              icon={UserOutlined}
-              placeholder="Enter your Name"
               rules={[{ required: true, message: "Please input your Name!" }]}
-            />
+            >
+              <CustomInput icon={UserOutlined} placeholder="Enter your Name" />
+            </Form.Item>
 
-            {/* Email Input */}
-            <CustomInput
+            {/* Email Input Wrapped in Form.Item */}
+            <Form.Item
               name="email"
               label="Email"
-              icon={MailOutlined}
-              placeholder="Enter your Email"
               rules={[
                 { required: true, message: "Please input your Email!" },
                 { type: "email", message: "Please enter a valid email!" },
               ]}
-            />
+            >
+              <CustomInput icon={MailOutlined} placeholder="Enter your Email" />
+            </Form.Item>
 
-            {/* Phone Number Input */}
-            <CustomInput
+            {/* Phone Number Input Wrapped in Form.Item */}
+            <Form.Item
               name="phone"
               label="Phone Number"
-              icon={PhoneOutlined}
-              placeholder="Enter your Phone Number"
-              rules={[{ required: true, message: "Please input your Phone Number!" }]}
-            />
+              rules={[
+                { required: true, message: "Please input your Phone Number!" },
+              ]}
+            >
+              <CustomInput
+                icon={PhoneOutlined}
+                placeholder="Enter your Phone Number"
+              />
+            </Form.Item>
 
-            {/* Address Input */}
-            <CustomInput
+            {/* Address Input Wrapped in Form.Item */}
+            <Form.Item
               name="address"
               label="Address"
-              icon={HomeOutlined}
-              placeholder="Enter your Address"
-              rules={[{ required: true, message: "Please input your Address!" }]}
-            />
+              rules={[
+                { required: true, message: "Please input your Address!" },
+              ]}
+            >
+              <CustomInput
+                icon={HomeOutlined}
+                placeholder="Enter your Address"
+              />
+            </Form.Item>
 
-            {/* Password Input */}
-            <CustomInput
+            {/* Password Input Wrapped in Form.Item */}
+            <Form.Item
               name="password"
               label="Password"
-              icon={LockOutlined}
-              isPassword={true}
-              placeholder="Enter your Password"
-              rules={[{ required: true, message: "Please input your Password!" }]}
-            />
+              rules={[
+                { required: true, message: "Please input your Password!" },
+              ]}
+            >
+              <CustomInput
+                icon={LockOutlined}
+                isPassword={true}
+                placeholder="Enter your Password"
+              />
+            </Form.Item>
 
-            {/* Terms and Conditions */}
+            {/* Terms and Conditions Wrapped in Form.Item */}
             <Form.Item name="terms" valuePropName="checked">
               <Checkbox>
                 I accept the Terms of Service and Privacy Policy
@@ -120,7 +135,9 @@ const Register: React.FC = () => {
 
             {/* Submit Button */}
             <Form.Item>
-              <CustomLoadingButton loading={loading}>Sign Up</CustomLoadingButton>
+              <CustomLoadingButton loading={loading}>
+                Sign Up
+              </CustomLoadingButton>
             </Form.Item>
           </Form>
           <p className="text-gray-500 mt-5 text-center">

@@ -40,7 +40,7 @@ const ChatBot: React.FC = () => {
       <MainContainer>
         <CustomBreadcrumb items={breadcrumbItems} />
         <h1 className="text-5xl font-semibold text-[#32526B] text-center my-5">
-          Asking Your question
+          Asking Your Question
         </h1>
         <div className="w-full py-8">
           <div className="w-full max-w-2xl mx-auto border px-8 py-14 bg-[#F1F9FF] rounded-xl border-[#77C4FE]">
@@ -49,35 +49,42 @@ const ChatBot: React.FC = () => {
               layout="vertical"
               className="space-y-3"
             >
-              <CustomInput
+              {/* Name Input Wrapped in Form.Item */}
+              <Form.Item
                 name="name"
                 label="Your Name"
-                placeholder="Name"
-                icon={UserOutlined}
                 rules={[{ required: true, message: "Please input your name!" }]}
-              />
-              <CustomInput
+              >
+                <CustomInput placeholder="Name" icon={UserOutlined} />
+              </Form.Item>
+
+              {/* Email Input Wrapped in Form.Item */}
+              <Form.Item
                 name="email"
                 label="Your Email"
-                placeholder="Email"
-                icon={MailOutlined}
                 rules={[
                   { required: true, message: "Please input your email!" },
                   { type: "email", message: "Please enter a valid email!" },
                 ]}
-              />
-              <CustomInput
+              >
+                <CustomInput placeholder="Email" icon={MailOutlined} />
+              </Form.Item>
+
+              {/* Message Input Wrapped in Form.Item */}
+              <Form.Item
                 name="message"
                 label="Your Question"
-                placeholder="Write Now"
-                isTextArea
                 rules={[
                   { required: true, message: "Please input your question!" },
                 ]}
-              />
+              >
+                <CustomInput placeholder="Write Now" isTextArea />
+              </Form.Item>
+
+              {/* Submit Button */}
               <Form.Item>
                 <div className="mt-6">
-                  <CustomLoadingButton className="">Start Chat</CustomLoadingButton>
+                  <CustomLoadingButton>Start Chat</CustomLoadingButton>
                 </div>
               </Form.Item>
             </Form>

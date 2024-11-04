@@ -51,30 +51,37 @@ const Login: React.FC = () => {
             className="space-y-3 mt-5"
             layout="vertical"
           >
-            {/* Email Input */}
-            <CustomInput
+            {/* Email Input Wrapped in Form.Item */}
+            <Form.Item
               name="email"
               label="Email"
-              icon={MailOutlined}
-              placeholder="Enter your Email"
               rules={[
                 { required: true, message: "Please input your Email!" },
                 { type: "email", message: "Please enter a valid email!" },
               ]}
-            />
-            {/* Password Input */}
-            <CustomInput
+            >
+              <CustomInput
+                icon={MailOutlined}
+                placeholder="Enter your Email"
+              />
+            </Form.Item>
+
+            {/* Password Input Wrapped in Form.Item */}
+            <Form.Item
               name="password"
               label="Password"
-              icon={LockOutlined}
-              isPassword={true}
-              placeholder="Enter your Password"
               rules={[{ required: true, message: "Please input your Password!" }]}
-            />
+            >
+              <CustomInput
+                icon={LockOutlined}
+                isPassword={true}
+                placeholder="Enter your Password"
+              />
+            </Form.Item>
 
             <div className="flex justify-between items-center">
-              {/* Terms and Conditions */}
-              <Form.Item name="remember" valuePropName="checked">
+              {/* Remember Me Checkbox */}
+              <Form.Item name="remember" valuePropName="checked" noStyle>
                 <Checkbox>Remember me</Checkbox>
               </Form.Item>
               <Link href="/forgot-password">
@@ -87,12 +94,14 @@ const Login: React.FC = () => {
               <CustomLoadingButton loading={loading}>Login</CustomLoadingButton>
             </Form.Item>
           </Form>
+
           <p className="text-gray-500 mt-5 text-center">
             Already have an account?{" "}
             <Link href="/register" className="text-blue-500">
               Register
             </Link>
           </p>
+
           <div className="w-full flex justify-center items-center gap-2 mt-5">
             <div className="w-full h-[1px] bg-gray-800"></div>
             <div className="w-full">
@@ -100,6 +109,7 @@ const Login: React.FC = () => {
             </div>
             <div className="w-full h-[1px] bg-gray-800"></div>
           </div>
+
           <div className="mt-5">
             <div className="size-14 mx-auto border border-[#C0E4FF] rounded-full flex justify-center items-center">
               <FcGoogle size={28} />
@@ -109,7 +119,7 @@ const Login: React.FC = () => {
 
         {/* Right side: Nurse image and circle background */}
         <div className="hidden lg:block w-full">
-          <div className="w-full bg-[#C0E4FF] py-[92px] flex  flex-col md:flex-row  justify-center  rounded-xl">
+          <div className="w-full bg-[#C0E4FF] py-[92px] flex flex-col md:flex-row justify-center rounded-xl">
             {/* Circle background */}
             <Image
               width={550}

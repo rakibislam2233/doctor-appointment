@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Form } from "antd";
 import { MailOutlined } from "@ant-design/icons";
 import logo from "@/assets/logo/logo.png";
-// import doctorImage from "@/assets/hero-section/main-image.png";
 import nurseImage from "@/assets/hero-section/nurse.png";
 import circle from "@/assets/hero-section/circle.png";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
@@ -40,7 +39,7 @@ const ForgotPassword = () => {
             <div className="size-[80px] relative mx-auto md:mx-0">
               <Image fill src={logo} alt="logo" />
             </div>
-            <h2 className="text-3xl font-semibold ">Forgot Password!</h2>
+            <h2 className="text-3xl font-semibold">Forgot Password!</h2>
             <p className="text-gray-500">
               Please enter your Email to reset your password.
             </p>
@@ -51,24 +50,23 @@ const ForgotPassword = () => {
             className="space-y-3 mt-5"
             layout="vertical"
           >
-            {/* Email Input */}
-            <CustomInput
+            {/* Email Input Wrapped in Form.Item */}
+            <Form.Item
               name="email"
               label="Email"
-              icon={MailOutlined}
-              placeholder="Enter your Email"
               rules={[
                 { required: true, message: "Please input your Email!" },
                 { type: "email", message: "Please enter a valid email!" },
               ]}
-            />
+            >
+              <CustomInput icon={MailOutlined} placeholder="Enter your Email" />
+            </Form.Item>
             {/* Submit Button */}
             <Form.Item>
-            <div className="mt-2">
-
-              <CustomLoadingButton loading={loading}>
-                Get Otp
-              </CustomLoadingButton>
+              <div className="mt-2">
+                <CustomLoadingButton loading={loading}>
+                  Get Otp
+                </CustomLoadingButton>
               </div>
             </Form.Item>
           </Form>
@@ -76,7 +74,7 @@ const ForgotPassword = () => {
 
         {/* Right side: Nurse image and circle background */}
         <div className="hidden lg:block w-full">
-          <div className="w-full bg-[#C0E4FF] py-[92px] flex  flex-col md:flex-row  justify-center  rounded-xl">
+          <div className="w-full bg-[#C0E4FF] py-[92px] flex flex-col md:flex-row justify-center rounded-xl">
             {/* Circle background */}
             <Image
               width={550}

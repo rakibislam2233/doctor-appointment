@@ -1,52 +1,45 @@
-/* eslint-disable react/prop-types */
-import React from "react";
+"use client";
 import { Select } from "antd";
-import { SelectProps } from "antd/lib/select";
+import { FC } from "react";
 
-// Define types for props
-interface CustomSelectProps extends SelectProps<unknown> {
-  icon?: React.ElementType; // Type for the icon (React component)
-  label?: React.ReactNode; // Label can be any React node
-  placeholder?: string; // Optional string for placeholder
-  className?: string; // Optional string for class names
-  options?: { value: string | number; label: React.ReactNode }[]; // Options array with value and label
+interface Option {
+  value: string | number;
+  label: string;
 }
 
-const CustomSelect: React.FC<CustomSelectProps> = ({
-  icon: Icon, // Dynamic icon component
-  label, // Label text
-  placeholder, // Placeholder text
-  className = "", // Optional className, defaults to empty string
-  options = [], // Default empty options array
-  ...rest // Any additional props (from Ant Design SelectProps)
+interface CustomSelectProps {
+  icon?: FC<any>;
+  placeholder?: string;
+  className?: string;
+  options?: Option[];
+  [key: string]: unknown;
+}
+
+const CustomSelect: FC<CustomSelectProps> = ({
+  icon: Icon,
+  placeholder,
+  className = "",
+  options = [],
+  ...rest
 }) => {
   return (
-    <div className="w-full">
-      {/* Dynamic Label */}
-      {label && (
-        <label className="block mb-2 text-gray-700 text-sm font-medium">
-          {label}
-        </label>
-      )}
-
-      <div className="relative">
-        <Select
-          size="large"
-          style={{
-            background: "#EEF3FF",
-          }}
-          placeholder={placeholder || "Select value"} // Dynamic placeholder
-          className={`w-full text-[16px] bg-[#EEF3FF] text-gray-700 rounded-lg ${className}`}
-          suffixIcon={Icon && <Icon className="text-gray-500 text-xl" />} // Dynamic icon
-          {...rest} // Additional props
-        >
-          {options.map((option) => (
-            <Select.Option key={option.value} value={option.value}>
-              {option.label}
-            </Select.Option>
-          ))}
-        </Select>
-      </div>
+    <div className="relative">
+      <Select
+        size="large"
+        style={{
+          padding: "20px",
+        }}
+        placeholder={placeholder || "Select value"}
+        className={`w-full border border-[#77C4FE] px-4 py-2 text-[16px] bg-[#D5EDFF] text-gray-700 rounded-lg focus:border-[#77C4FE] ${className}`}
+        suffixIcon={Icon && <Icon className="text-gray-500 text-xl" />}
+        {...rest}
+      >
+        {options.map((option) => (
+          <Select.Option key={option.value} value={option.value}>
+            {option.label}
+          </Select.Option>
+        ))}
+      </Select>
     </div>
   );
 };

@@ -59,7 +59,7 @@ const bodyParts = [
   { label: "Leg", value: "leg" },
 ];
 
-const Appointment = () => {
+const PaidAppointment = () => {
   const [form] = Form.useForm<FormValues>();
 
   const onFinish = (values: FormValues) => {
@@ -236,4 +236,4 @@ const Appointment = () => {
   );
 };
 
-export default Appointment;
+export default PaidAppointment;
