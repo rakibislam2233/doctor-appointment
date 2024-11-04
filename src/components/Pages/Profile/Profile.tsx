@@ -49,7 +49,7 @@ const ProfileForm: React.FC = () => {
     <section className="min-h-screen p-10">
       <MainContainer>
         <CustomBreadcrumb items={breadcrumbItems} />
-        <div className="max-w-6xl mx-auto mt-5">
+        <div className="max-w-6xl mx-auto mt-8">
           <h1 className="text-2xl font-semibold mb-6">Add Profile Picture</h1>
           {/* Profile Picture Section */}
           <div className="flex items-center gap-8 mb-8">

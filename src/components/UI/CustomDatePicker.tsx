@@ -7,7 +7,7 @@ interface CustomDatePickerProps {
   placeholder?: string;
   className?: string;
   disabled?: boolean;
-  [key: string]: any; // To allow additional props
+  [key: string]: unknown; // Use 'unknown' instead of 'any' for better type safety
 }
 
 const CustomDatePicker: FC<CustomDatePickerProps> = ({
