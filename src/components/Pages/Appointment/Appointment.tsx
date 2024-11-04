@@ -7,17 +7,12 @@ import {
 } from "@ant-design/icons";
 import {
   Form,
-  Input,
   Radio,
-  Button,
   DatePicker,
   TimePicker,
-  Row,
-  Col,
 } from "antd";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomBreadcrumb from "@/components/UI/CustomBreadcrumb";
-import moment from "moment";
 import CustomInput from "@/components/UI/CustomInput";
 import CustomLoadingButton from "@/components/UI/CustomLoadingButton";
 
@@ -40,7 +35,7 @@ const breadcrumbItems = [
 const Appointment = () => {
   const [form] = Form.useForm();
 
-  const onFinish = (values: any) => {
+  const onFinish = (values: unknown) => {
     console.log("Form Values:", values);
   };
 

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Form } from "antd";
 import { MailOutlined } from "@ant-design/icons";
 import logo from "@/assets/logo/logo.png";
+// import doctorImage from "@/assets/hero-section/main-image.png";
 import nurseImage from "@/assets/hero-section/nurse.png";
 import circle from "@/assets/hero-section/circle.png";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
