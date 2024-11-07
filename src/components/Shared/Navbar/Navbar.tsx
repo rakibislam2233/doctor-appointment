@@ -59,7 +59,7 @@ const Navbar = () => {
 
         {/* Drawer for Mobile Navigation */}
         <Drawer
-          title="Navigation"
+          title="E Clinic"
           placement="right"
           onClose={closeDrawer}
           open={drawerVisible}
