@@ -42,7 +42,7 @@ const ChangePassword: React.FC = () => {
   };
 
   return (
-    <section className="w-full min-h-screen p-10 bg-[#F1F9FF]">
+    <section className="w-full min-h-screen px-5 py-10 bg-[#F1F9FF]">
       <MainContainer>
         <CustomBreadcrumb items={breadcrumbItems} />
         <div className="max-w-4xl mx-auto mt-8">

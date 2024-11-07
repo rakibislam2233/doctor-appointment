@@ -46,7 +46,7 @@ const ProfileForm: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen p-10">
+    <section className="min-h-screen px-10 py-10">
       <MainContainer>
         <CustomBreadcrumb items={breadcrumbItems} />
         <div className="max-w-6xl mx-auto mt-8">

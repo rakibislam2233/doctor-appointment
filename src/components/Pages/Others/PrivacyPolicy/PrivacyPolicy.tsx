@@ -17,7 +17,7 @@ const breadcrumbItems = [
 ];
 const PrivacyPolicy = () => {
   return (
-    <section className="w-full px-5  py-10">
+    <section className="w-full px-5 py-10">
       <MainContainer>
         <CustomBreadcrumb items={breadcrumbItems} />
         <div>

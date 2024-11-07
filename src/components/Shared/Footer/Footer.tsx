@@ -7,7 +7,7 @@ import MainContainer from "../MainContainer/MainContainer";
 import Link from "next/link";
 const Footer = () => {
   return (
-    <footer className="w-full py-20 bg-[#548BB4] px-5 md:px-0">
+    <footer className="w-full py-20 bg-[#548BB4] px-5">
       <MainContainer className="space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 ">
           <div className="space-y-4 text-center md:text-start">

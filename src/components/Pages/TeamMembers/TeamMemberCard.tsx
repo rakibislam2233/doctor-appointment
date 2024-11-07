@@ -12,7 +12,7 @@ interface TeamMember {
 }
 function TeamMemberCard({ member }: { member: TeamMember }) {
   return (
-    <div className="bg-[#EEE2EE] shadow-lg rounded-xl overflow-hidden p-3">
+    <div className="bg-[#EEE2EE] shadow-lg rounded-xl overflow-hidden px-5 py-3">
       {/* Profile Image */}
       <div className="relative w-full h-96 rounded-t-xl">
         <Link href={`/team-members/${member.id}`}>
