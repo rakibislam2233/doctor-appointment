@@ -9,6 +9,7 @@ import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomLoadingButton from "@/components/UI/CustomLoadingButton";
 import React, { useState } from "react";
 import CustomInput from "@/components/UI/CustomInput";
+import { useRouter } from "next/navigation";
 
 // Define form values interface
 interface ResetPasswordFormValues {
@@ -19,7 +20,7 @@ interface ResetPasswordFormValues {
 const ResetPassword: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [form] = Form.useForm(); // Hook for handling form
-
+  const router = useRouter()
   // Handle form submission
   const onFinish = (values: ResetPasswordFormValues) => {
     setLoading(true);
@@ -27,6 +28,7 @@ const ResetPassword: React.FC = () => {
     setTimeout(() => {
       console.log("Received values from form: ", values);
       setLoading(false);
+      router.push('/')
     }, 2000);
   };
 
