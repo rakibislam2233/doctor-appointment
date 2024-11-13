@@ -1,6 +1,5 @@
 import React from "react";
 import { HomeOutlined } from "@ant-design/icons";
-import Image from "next/image";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomBreadcrumb from "@/components/UI/CustomBreadcrumb";
 import profileImage from "@/assets/hero-section/nurse.png"; // Add your profile image path
@@ -42,22 +41,16 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
           {/* Left Section (Doctor Image and Contact Info) */}
           <div className="w-full lg:w-1/3 rounded-xl">
             <div className="flex flex-col items-center">
-              <div className="w-full h-full max-w-[500px] mx-auto bg-[#C0E4FF] flex justify-center relative rounded-xl px-5 py-16 -mt-0 lg:-mt-32">
-                {/* Circle background */}
-                <Image
-                  width={380}
-                  height={380}
+              <div className="w-full h-full max-w-[500px] mx-auto bg-[#C0E4FF] flex justify-center relative rounded-xl px-5 py-8 -mt-0 lg:-mt-32">
+                <img
                   src={circle.src}
-                  alt="circle"
-                  className="mx-auto m-l0 lg:ml-24"
+                  alt=""
+                  className="w-[300px] md:w-[380px] lg:w-[390px] xl:w-[400px] -mr-14 md:-mr-16 xl:-mr-20 2xl:-mr-28"
                 />
-                {/* Nurse image */}
-                <Image
-                  width={200}
-                  height={200}
-                  src={profileImage}
-                  alt="nurse"
-                  className="absolute  top-28 md:top-[135px] left-14 lg:left-24"
+                <img
+                  src={profileImage.src}
+                  alt=""
+                  className="h-[280px] lg:h-[180px] xl:h-[270px] 2xl:h-[320px] bottom-0 absolute "
                 />
               </div>
             </div>
