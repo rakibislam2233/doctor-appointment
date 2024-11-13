@@ -30,7 +30,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right side: Nurse image with circle background */}
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <div className="w-full flex justify-center relative ">
             <div className="w-full">
               <Image
@@ -63,14 +63,31 @@ const HeroSection = () => {
               </h1>
             </div>
           </div>
-        </div>
-        <div className="w-full h-[400px] relative block md:hidden">
-          <Image
-            fill
-            src={doctorImage}
-            alt="nurse image"
-            className="absolute"
+        </div> */}
+        <div className="w-full h-full rounded-xl flex justify-center items-center relative">
+          <img
+            src={circle.src}
+            alt=""
+            className="w-[400px] sm:w-[450px] md:w-[480px] xl:w-[580px] "
           />
+          <img
+            src={doctorImage.src}
+            alt=""
+            className="h-[280px] sm:h-[320px]  md:h-[330px] xl:h-[400px] 2xl:h-[480px] left-[24%] -bottom-[50px] absolute "
+          />
+          <div className="flex gap-3 items-center -left-8 absolute top-36 bg-white px-8 py-4 rounded-3xl ">
+            <Image width={50} height={50} src={emoji} alt="emoji" />
+            <div className="flex flex-col gap-2">
+              <h1 className="text-2xl font-semibold text-[#77C4FE]">84k+</h1>
+              <h1>Happy Client</h1>
+            </div>
+          </div>
+          <div className="flex gap-5 items-center right-28 absolute bottom-9 bg-white px-10 py-5 rounded-3xl">
+            <Image width={50} height={50} src={checked} alt="emoji" />
+            <h1 className="font-semibold">
+              Regular <br /> Checkup
+            </h1>
+          </div>
         </div>
 
         {/* info side */}
