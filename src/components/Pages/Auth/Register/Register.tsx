@@ -59,7 +59,7 @@ const Register: React.FC = () => {
           <Form<RegisterFormValues>
             name="register"
             onFinish={onFinish}
-            className="space-y-3 mt-5"
+            className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 mt-5"
             layout="vertical"
           >
             {/* Name Input Wrapped in Form.Item */}
@@ -110,6 +110,19 @@ const Register: React.FC = () => {
                 placeholder="Enter your Address"
               />
             </Form.Item>
+            {/* Address Input Wrapped in Form.Item */}
+            <Form.Item
+              name="gender"
+              label="Gender"
+              rules={[
+                { required: true, message: "Please input your Gender!" },
+              ]}
+            >
+              <CustomInput
+                icon={HomeOutlined}
+                placeholder="Enter your Gender"
+              />
+            </Form.Item>
 
             {/* Password Input Wrapped in Form.Item */}
             <Form.Item
@@ -127,14 +140,14 @@ const Register: React.FC = () => {
             </Form.Item>
 
             {/* Terms and Conditions Wrapped in Form.Item */}
-            <Form.Item name="terms" valuePropName="checked">
+            <Form.Item name="terms" valuePropName="checked"  className="col-span-full">
               <Checkbox>
                 I accept the Terms of Service and Privacy Policy
               </Checkbox>
             </Form.Item>
 
             {/* Submit Button */}
-            <Form.Item>
+            <Form.Item  className="col-span-full">
               <CustomLoadingButton loading={loading}>
                 Sign Up
               </CustomLoadingButton>
@@ -161,25 +174,17 @@ const Register: React.FC = () => {
         </div>
 
         {/* Right side: Nurse image and circle background */}
-        <div className="hidden lg:block w-full">
-          <div className="w-full bg-[#C0E4FF] py-[92px] flex flex-col md:flex-row justify-center rounded-xl">
-            {/* Circle background */}
-            <Image
-              width={550}
-              height={550}
-              src={circle.src}
-              alt="circle"
-              className="absolute mx-auto"
-            />
-            {/* Nurse image */}
-            <Image
-              width={250}
-              height={250}
-              src={nurseImage}
-              alt="nurse"
-              className="relative -left-16 top-[92px] bottom-0 z-10"
-            />
-          </div>
+        <div className="w-full bg-[#C0E4FF]  rounded-xl hidden sm:flex justify-center items-center relative order-first md:order-last">
+          <img
+            src={circle.src}
+            alt=""
+            className="w-[400px] sm:w-[450px] md:w-[480px] xl:w-[500px] -mr-14 md:-mr-16 xl:-mr-20 2xl:-mr-28"
+          />
+          <img
+            src={nurseImage.src}
+            alt=""
+            className="h-[350px] sm:h-[390px]  md:h-[400px] xl:h-[470px] 2xl:h-[500px] bottom-0 absolute "
+          />
         </div>
       </MainContainer>
     </section>

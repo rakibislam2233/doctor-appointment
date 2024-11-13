@@ -33,48 +33,19 @@ const reviews = [
     image: "https://i.ibb.co.com/YDBLTZF/Street.jpg", // Replace with your third image path
   },
   // Add more reviews as needed
-];
+]
 
-// Custom Arrow Component
-interface CustomArrowProps {
-  className?: string;
-  style?: React.CSSProperties;
-  onClick?: React.MouseEventHandler<HTMLDivElement>;
-}
 
-const CustomArrow: React.FC<CustomArrowProps> = ({
-  className,
-  style,
-  onClick,
-}) => {
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "#D3B5D3",
-        padding: "20px",
-        borderRadius: "50%",
-      }}
-      onClick={onClick}
-    ></div>
-  );
-};
 
 const Review = () => {
   // Settings for react-slick
   const settings = {
-    dots: false, // No pagination dots
-    infinite: true, // Infinite looping of slides
+    dots: true,
+    infinite: true, 
+    autoplay: true, // Enable autoplay
     speed: 500, // Transition speed
     slidesToShow: 1, // Show 1 slide at a time on mobile
     slidesToScroll: 1, // Scroll 1 slide at a time
-    arrows: true, // Enable arrows
-    nextArrow: <CustomArrow />, // Custom next arrow
-    prevArrow: <CustomArrow />, // Custom previous arrow
     responsive: [
       {
         breakpoint: 768, // Tablet view

@@ -110,26 +110,20 @@ const ResetPassword: React.FC = () => {
         </div>
 
         {/* Right side: Nurse image and circle background */}
-        <div className="hidden lg:block w-full">
-          <div className="w-full bg-[#C0E4FF] py-[92px] flex flex-col md:flex-row justify-center rounded-xl">
-            {/* Circle background */}
-            <Image
-              width={550}
-              height={550}
+        <div className="w-full bg-[#C0E4FF]  rounded-xl flex justify-center items-center relative order-first md:order-last">
+            <img
               src={circle.src}
-              alt="circle"
-              className="absolute mx-auto"
+              alt=""
+              className="w-[400px] sm:w-[450px] md:w-[480px] xl:w-[500px] -mr-14 md:-mr-16 xl:-mr-20 2xl:-mr-28"
             />
-            {/* Nurse image */}
-            <Image
-              width={250}
-              height={250}
-              src={nurseImage}
-              alt="nurse"
-              className="relative -left-16 top-[92px] bottom-0 z-10"
+            <img
+              src={nurseImage.src}
+              alt=""
+              className="h-[270px] sm:h-[310px]  md:h-[320px] xl:h-[390px] 2xl:h-[420px] bottom-0 absolute "
             />
+
+         
           </div>
-        </div>
       </MainContainer>
     </section>
   );
