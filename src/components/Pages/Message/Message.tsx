@@ -72,12 +72,12 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ member }) => (
         <button className="p-3 bg-gray-100 hover:bg-gray-200 rounded-full transition duration-200">
           <FiImage className="text-[#77C4FE]" size={18} />
         </button>
-        <Link href="/chat/callaudio">
+        <Link href="/audio-call">
           <button className="p-3 bg-gray-100 hover:bg-gray-200 rounded-full transition duration-200">
             <FiPhone className="text-[#77C4FE]" size={18} />
           </button>
         </Link>
-        <Link href="/chat/videocall">
+        <Link href="video-call">
           <button className="p-3 bg-gray-100 hover:bg-gray-200 rounded-full transition duration-200">
             <FiVideo className="text-[#77C4FE]" size={18} />
           </button>
