@@ -2,13 +2,10 @@
 import aboutBg from "@/assets/about/aboutbg.png";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomBreadcrumb from "@/components/UI/CustomBreadcrumb";
+import CustomDatePicker from "@/components/UI/CustomDatePicker";
 import CustomInput from "@/components/UI/CustomInput";
 import CustomLoadingButton from "@/components/UI/CustomLoadingButton";
-import CustomDatePicker from "@/components/UI/CustomDatePicker";
-import {
-  ClockCircleOutlined,
-  HomeOutlined,
-} from "@ant-design/icons";
+import { ClockCircleOutlined, HomeOutlined } from "@ant-design/icons";
 import { Form, Radio, TimePicker } from "antd";
 
 interface FormValues {
@@ -59,7 +56,7 @@ const bodyParts = [
   { label: "Leg", value: "leg" },
 ];
 
-const PaidAppointment = () => {
+const BookAppointment = () => {
   const [form] = Form.useForm<FormValues>();
 
   const onFinish = (values: FormValues) => {
@@ -236,4 +233,4 @@ const PaidAppointment = () => {
   );
 };
 
-export default PaidAppointment;
+export default BookAppointment;

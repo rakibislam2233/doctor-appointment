@@ -120,7 +120,7 @@ const AboutMe = () => {
               </div>
             </div>
             <div className="flex justify-end items-center my-5">
-              <Link href={"/appointment"}>
+              <Link href={"/book-appointment"}>
                 <CustomButton>Book an appointment</CustomButton>
               </Link>
             </div>
