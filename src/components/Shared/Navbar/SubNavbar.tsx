@@ -1,11 +1,10 @@
-import React from "react";
 import { IoMailUnread } from "react-icons/io5";
-import MainContainer from "../MainContainer/MainContainer";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
+import MainContainer from "../MainContainer/MainContainer";
 
 const SubNavbar = () => {
   return (
-    <section className="w-full bg-[#77C4FE] px-3 py-4">
+    <section className="w-full bg-primary px-3 py-4 text-white">
       <MainContainer className="flex flex-wrap items-center gap-8">
         <div className="flex items-center gap-3 font-medium">
           <IoMailUnread size={24} />

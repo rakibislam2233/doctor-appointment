@@ -21,7 +21,7 @@ const CustomDatePicker: FC<CustomDatePickerProps> = ({
       size="large"
       disabled={disabled}
       placeholder={placeholder || "Select date"}
-      className={`w-full border border-[#77C4FE] px-4 py-2 text-[16px] bg-[#D5EDFF] text-gray-700 rounded-lg focus:border-[#77C4FE] ${className}`}
+      className={`w-full border border-[#77C4FE] px-4 py-2 text-[16px] bg-secondary text-gray-700 rounded-lg focus:border-[#77C4FE] ${className}`}
       {...rest} // Additional props
     />
   );

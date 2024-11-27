@@ -2,13 +2,10 @@
 import aboutBg from "@/assets/about/aboutbg.png";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomBreadcrumb from "@/components/UI/CustomBreadcrumb";
+import CustomDatePicker from "@/components/UI/CustomDatePicker";
 import CustomInput from "@/components/UI/CustomInput";
 import CustomLoadingButton from "@/components/UI/CustomLoadingButton";
-import CustomDatePicker from "@/components/UI/CustomDatePicker";
-import {
-  ClockCircleOutlined,
-  HomeOutlined,
-} from "@ant-design/icons";
+import { ClockCircleOutlined, HomeOutlined } from "@ant-design/icons";
 import { Form, Radio, TimePicker } from "antd";
 
 interface FormValues {
@@ -143,7 +140,7 @@ const PaidBookAppointment = () => {
                 >
                   <TimePicker
                     placeholder="--:-- --"
-                    className="w-full border border-[#77C4FE] px-4 py-2 text-[16px] bg-[#D5EDFF] text-gray-700 rounded-lg focus:border-[#77C4FE]"
+                    className="w-full border border-[#77C4FE] px-4 py-2 text-[16px] bg-secondary text-gray-700 rounded-lg focus:border-[#77C4FE]"
                     format="HH:mm"
                     suffixIcon={
                       <ClockCircleOutlined style={{ color: "#77C4FE" }} />

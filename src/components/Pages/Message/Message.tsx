@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
-import {
-  FiPhone,
-  FiVideo,
-  FiImage,
-  FiSmile,
-  FiLink,
-  FiMoreVertical,
-} from "react-icons/fi";
-import Link from "next/link";
-import React from "react";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import {
+  FiImage,
+  FiLink,
+  FiMoreVertical,
+  FiPhone,
+  FiSmile,
+  FiVideo,
+} from "react-icons/fi";
 
 interface Member {
   id: number;
@@ -161,8 +161,8 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({
     <div
       className={`max-w-xs md:max-w-md lg:max-w-lg p-3 rounded-lg shadow-sm ${
         position === "right"
-          ? "bg-[#77C4FE] text-black rounded-br-none"
-          : "bg-[#D5EDFF] text-gray-900 rounded-bl-none"
+          ? "bg-primary text-black rounded-br-none"
+          : "bg-secondary text-gray-900 rounded-bl-none"
       }`}
     >
       <p className="text-sm">{message}</p>

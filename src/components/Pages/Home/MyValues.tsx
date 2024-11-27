@@ -1,8 +1,8 @@
-import MainContainer from "@/components/Shared/MainContainer/MainContainer";
-import life from "@/assets/my-values/life.png";
 import idea from "@/assets/my-values/idea.png";
+import life from "@/assets/my-values/life.png";
 import set from "@/assets/my-values/set.png";
 import rakib from "@/assets/my-values/true.png";
+import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import Image from "next/image";
 const MyValues = () => {
   const values = [
@@ -46,10 +46,10 @@ const MyValues = () => {
           {values?.map((value, i) => (
             <div
               key={i}
-              className="w-full h-full bg-[#77C4FE] py-0.5 rounded-3xl"
+              className="w-full h-full bg-primary py-0.5 rounded-3xl"
             >
               <div className="w-full bg-[#F1F9FF] p-6 space-y-4 rounded-3xl">
-                <div className="size-16 bg-[#77C4FE] rounded-full flex justify-center items-center">
+                <div className="size-16 bg-primary rounded-full flex justify-center items-center">
                   <Image src={value.image} alt="life" width={35} height={35} />
                 </div>
                 <h1 className="text-3xl font-semibold text-[#32526B]">

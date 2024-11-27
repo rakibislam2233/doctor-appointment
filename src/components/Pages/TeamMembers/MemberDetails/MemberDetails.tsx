@@ -1,13 +1,12 @@
-import React from "react";
-import { HomeOutlined } from "@ant-design/icons";
+import circle from "@/assets/hero-section/circle.png";
+import profileImage from "@/assets/hero-section/nurse.png"; // Add your profile image path
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomBreadcrumb from "@/components/UI/CustomBreadcrumb";
-import profileImage from "@/assets/hero-section/nurse.png"; // Add your profile image path
-import circle from "@/assets/hero-section/circle.png";
+import { HomeOutlined } from "@ant-design/icons";
 import Link from "next/link";
+import { FaAward } from "react-icons/fa";
 import { FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
 import { MdLocalPhone, MdOutlineEmail, MdSchool, MdWork } from "react-icons/md";
-import { FaAward } from "react-icons/fa";
 const breadcrumbItems = [
   {
     href: "/",
@@ -116,7 +115,7 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="text-xl font-semibold text-[#32526B]">
                         University of California, San Francisco
@@ -125,7 +124,7 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="text-xl font-semibold text-[#32526B]">
                         University of California, Los Angeles (UCLA) Medical
@@ -137,7 +136,7 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="text-xl font-semibold text-[#32526B]">
                         University of California, Berkeley
@@ -157,7 +156,7 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="font-semibold text-[#32526B]">
                         Community Mental Health Clinics
@@ -165,21 +164,21 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <h1 className="font-semibold text-[#32526B]">
                       Worked in community mental health clinics, private
                       practice, and academic medical centers.
                     </h1>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <h1 className="font-semibold text-[#32526B]">
                       Expertise in the treatment of mood disorders, anxiety
                       disorders, and psychotic disorders.
                     </h1>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <h1 className="font-semibold text-[#32526B]">
                       Complex Case Management
                     </h1>
@@ -194,7 +193,7 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="text-xl font-semibold text-[#32526B]">
                         FAPA Fellow
@@ -202,7 +201,7 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="text-xl font-semibold text-[#32526B]">
                         Research Contributions

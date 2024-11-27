@@ -9,8 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#0d28e0",
+        secondary: "#3780f9",
+        primaryBg: "#EBF6FE",
+        hoverText: "#dcbb87",
+      },
+      animation: {
+        "spin-reverse": "spin 1s linear reverse infinite",
       },
     },
   },

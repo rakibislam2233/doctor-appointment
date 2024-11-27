@@ -1,10 +1,11 @@
-import React from "react";
-import { HomeOutlined } from "@ant-design/icons";
+import circle from "@/assets/hero-section/circle.png";
+import profileImage from "@/assets/hero-section/nurse.png"; // Add your profile image path
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomBreadcrumb from "@/components/UI/CustomBreadcrumb";
-import profileImage from "@/assets/hero-section/nurse.png"; // Add your profile image path
-import circle from "@/assets/hero-section/circle.png";
+import CustomButton from "@/components/UI/CustomButton";
+import { HomeOutlined } from "@ant-design/icons";
 import Link from "next/link";
+import { FaAward } from "react-icons/fa";
 import { FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
 import {
   MdLocalPhone,
@@ -14,8 +15,6 @@ import {
   MdSchool,
   MdWork,
 } from "react-icons/md";
-import CustomButton from "@/components/UI/CustomButton";
-import { FaAward } from "react-icons/fa";
 const breadcrumbItems = [
   {
     href: "/",
@@ -95,7 +94,7 @@ const AboutMe = () => {
                   Appointment Schedules
                 </h1>
               </div>
-              <div className="w-full space-y-4 p-8 rounded-xl bg-[#D5EDFF]">
+              <div className="w-full space-y-4 p-8 rounded-xl bg-secondary">
                 <div className="flex justify-between items-center">
                   <h1>Monday</h1>
                   <h1 className="font-semibold flex items-center gap-1">
@@ -151,7 +150,7 @@ const AboutMe = () => {
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="text-xl font-semibold text-[#32526B]">
                         University of California, San Francisco
@@ -160,7 +159,7 @@ const AboutMe = () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="text-xl font-semibold text-[#32526B]">
                         University of California, Los Angeles (UCLA) Medical
@@ -172,7 +171,7 @@ const AboutMe = () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="text-xl font-semibold text-[#32526B]">
                         University of California, Berkeley
@@ -192,7 +191,7 @@ const AboutMe = () => {
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="font-semibold text-[#32526B]">
                         Community Mental Health Clinics
@@ -200,21 +199,21 @@ const AboutMe = () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <h1 className="font-semibold text-[#32526B]">
                       Worked in community mental health clinics, private
                       practice, and academic medical centers.
                     </h1>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <h1 className="font-semibold text-[#32526B]">
                       Expertise in the treatment of mood disorders, anxiety
                       disorders, and psychotic disorders.
                     </h1>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <h1 className="font-semibold text-[#32526B]">
                       Complex Case Management
                     </h1>
@@ -229,7 +228,7 @@ const AboutMe = () => {
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="text-xl font-semibold text-[#32526B]">
                         FAPA Fellow
@@ -237,7 +236,7 @@ const AboutMe = () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="bg-[#77C4FE] w-2 h-2 mt-2 rounded-full inline-block"></span>
+                    <span className="bg-primary w-2 h-2 mt-2 rounded-full inline-block"></span>
                     <div>
                       <h1 className="text-xl font-semibold text-[#32526B]">
                         Research Contributions

@@ -3,7 +3,7 @@
 import React from "react";
 
 interface CustomLoadingButtonProps {
-  border?:boolean,
+  border?: boolean;
   loading?: boolean;
   children: React.ReactNode;
   className?: string;
@@ -18,10 +18,14 @@ const CustomLoadingButton: React.FC<CustomLoadingButtonProps> = ({
   onClick,
 }) => {
   return (
-    <div className={`w-full ${border ? "border-2":"border-none"} p-0.5 border-2 border-[#77C4FE] rounded-xl`}>
+    <div
+      className={`w-full ${
+        border ? "border-2" : "border-none"
+      } p-0.5 border-2 border-[#77C4FE] rounded-xl`}
+    >
       <button
         type="submit" // Use button instead of submit
-        className={`${className} w-full bg-[#77C4FE] ${
+        className={`${className} w-full bg-primary ${
           loading ? "opacity-75" : "opacity-100"
         } flex px-5 py-3 rounded-lg justify-center items-center gap-5 text-white transition-all duration-500`}
         onClick={onClick}

@@ -1,14 +1,13 @@
 "use client";
 import logo from "@/assets/logo/logo.png";
 import CustomButton from "@/components/UI/CustomButton";
+import { MenuOutlined } from "@ant-design/icons";
+import { Button, Drawer } from "antd";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 import MainContainer from "../MainContainer/MainContainer";
 import ActiveLink from "./ActiveLink";
-import { usePathname } from "next/navigation";
-import Image from "next/image";
-import { useState } from "react";
-import { Drawer, Button } from "antd";
-import { MenuOutlined } from "@ant-design/icons";
-import Link from "next/link";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -23,14 +22,13 @@ const navLinks = [
 
 const Navbar = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
-  const path = usePathname();
 
   const showDrawer = () => setDrawerVisible(true);
   const closeDrawer = () => setDrawerVisible(false);
 
   return (
-    <nav className={`w-full ${path === "/" && "bg-[#F1F9FF]"} py-5`}>
-      <MainContainer className="p-3 bg-[#D5EDFF] flex justify-between items-center rounded-lg">
+    <nav className={`w-full  py-5`}>
+      <MainContainer className="p-3 bg-secondary flex justify-between items-center rounded-lg">
         <div>
           <div className="size-[80px] relative mx-auto md:mx-0">
             <Image fill src={logo} alt="logo" />
