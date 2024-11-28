@@ -6,7 +6,6 @@ import logo from "@/assets/logo/logo.png";
 import nurseImage from "@/assets/hero-section/nurse.png";
 import circle from "@/assets/hero-section/circle.png";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
-import CustomLoadingButton from "@/components/UI/CustomLoadingButton";
 import React from "react";
 import CustomInput from "@/components/UI/CustomInput";
 import { useRouter } from "next/navigation";
@@ -80,11 +79,13 @@ const ForgotPassword = () => {
           <img
             src={circle.src}
             alt=""
+            
             className="w-[400px] sm:w-[450px] md:w-[480px] xl:w-[500px] -mr-14 md:-mr-16 xl:-mr-20 2xl:-mr-28"
           />
           <img
             src={nurseImage.src}
             alt=""
+            
             className="h-[280px] sm:h-[320px]  md:h-[310px] xl:h-[380px] 2xl:h-[410px] bottom-0 absolute"
           />
         </div>
