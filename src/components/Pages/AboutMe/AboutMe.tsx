@@ -4,7 +4,6 @@ import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomBreadcrumb from "@/components/UI/CustomBreadcrumb";
 import CustomButton from "@/components/UI/CustomButton";
 import { HomeOutlined } from "@ant-design/icons";
-import Image from 'next/image'; // Import Next.js image component
 import Link from "next/link";
 import { FaAward } from "react-icons/fa";
 import { FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
