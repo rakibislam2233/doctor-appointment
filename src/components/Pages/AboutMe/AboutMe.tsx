@@ -41,7 +41,7 @@ const AboutMe = () => {
           {/* Left Section (Doctor Image and Contact Info) */}
           <div className="w-full lg:w-1/3 rounded-xl">
             <div className="flex flex-col items-center">
-              <div className="w-full h-full max-w-[500px] mx-auto bg-primary flex justify-center relative rounded-xl px-5 py-8 -mt-0 lg:-mt-32">
+              <div className="w-full h-full max-w-[500px] mx-auto bg-[#226de5] flex justify-center relative rounded-xl px-5 py-8 -mt-0 lg:-mt-32">
                 <img
                   src={circle.src}
                   alt=""
@@ -62,34 +62,34 @@ const AboutMe = () => {
                 <div className="flex space-x-3">
                   <Link
                     href={"/"}
-                    className="size-9 border border-[#6CB2E7] text-[#6CB2E7] rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
+                    className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#3780f9] hover:text-white transition-all duration-300"
                   >
                     <FiFacebook size={18} />
                   </Link>
                   <Link
                     href={"/"}
-                    className="size-9 border border-[#6CB2E7] text-[#6CB2E7] rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
+                    className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#3780f9] hover:text-white transition-all duration-300"
                   >
                     <FiLinkedin size={18} />
                   </Link>
                   <Link
                     href={"/"}
-                    className="size-9 border border-[#6CB2E7] text-[#6CB2E7] rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
+                    className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#3780f9] hover:text-white transition-all duration-300"
                   >
                     <FiTwitter size={18} />
                   </Link>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <MdLocalPhone color="#77C4FE" size={24} />
+                <MdLocalPhone color="#3780f9" size={24} />
                 <h1 className="font-semibold">013191179</h1>
               </div>
               <div className="flex items-center gap-3">
-                <MdOutlineEmail color="#77C4FE" size={24} />
+                <MdOutlineEmail color="#3780f9" size={24} />
                 <h1 className="font-semibold">rakib2020.tkg@gmail.com</h1>
               </div>
               <div className="flex items-center gap-3">
-                <MdOutlineCalendarMonth color="#77C4FE" size={24} />
+                <MdOutlineCalendarMonth color="#3780f9" size={24} />
                 <h1 className="text-2xl font-semibold">
                   Appointment Schedules
                 </h1>
@@ -146,7 +146,7 @@ const AboutMe = () => {
               {/* Degrees Section */}
               <div>
                 <h3 className="font-bold text-2xl mb-3 text-[#32526B] flex items-center gap-3">
-                  <MdSchool color="#77C4FE" size={32} /> Degrees
+                  <MdSchool color="#3780f9" size={32} /> Degrees
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">
@@ -187,7 +187,7 @@ const AboutMe = () => {
               {/* Experiences Section */}
               <div>
                 <h3 className="font-bold text-2xl mb-3 text-[#32526B] flex items-center gap-3">
-                  <MdWork color="#77C4FE" size={32} /> Experiences
+                  <MdWork color="#3780f9" size={32} /> Experiences
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">
@@ -224,7 +224,7 @@ const AboutMe = () => {
               {/* Awards/Achievements Section */}
               <div>
                 <h3 className="font-bold text-2xl mb-3 text-[#32526B] flex items-center gap-3">
-                  <FaAward color="#77C4FE" size={32} /> Awards/Achievements
+                  <FaAward color="#3780f9" size={32} /> Awards/Achievements
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">

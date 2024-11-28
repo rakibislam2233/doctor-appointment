@@ -73,7 +73,7 @@ const Faq = () => {
               onClick={() => toggleFaq(index)}
               className={`w-full p-5 cursor-pointer transition-all duration-500 ease-in-out  rounded-xl ${
                 openIndex === index
-                  ? "bg-[#6CB2E7]"
+                  ? "bg-[#3780f9]"
                   : "border-b border-gray-900 "
               }`}
             >

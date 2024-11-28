@@ -181,10 +181,16 @@ const Contact: React.FC = () => {
       className="bg-white"
     />
   </Form.Item>
-
   <Form.Item className="col-span-full">
-    <CustomLoadingButton>Submit</CustomLoadingButton>
-  </Form.Item>
+                <div className="mt-6">
+                  <button 
+                    type="submit"  // This uses Ant Design's default button style without extra border or background
+                    className="bg-primary text-white p-2 w-full text-center rounded-md"
+                  >
+                    Contact Us
+                  </button>
+                </div>
+              </Form.Item>
 </Form>
 
           </div>

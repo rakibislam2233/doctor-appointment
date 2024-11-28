@@ -37,19 +37,19 @@ const RecentBlogCard = (blog: RecentBlogCardProps) => {
           <div className="flex space-x-3">
             <Link
               href={"/"}
-              className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
+              className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#3780f9] hover:text-white transition-all duration-300"
             >
               <FiFacebook size={18} />
             </Link>
             <Link
               href={"/"}
-              className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
+              className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#3780f9] hover:text-white transition-all duration-300"
             >
               <FiLinkedin size={18} />
             </Link>
             <Link
               href={"/"}
-              className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
+              className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#3780f9] hover:text-white transition-all duration-300"
             >
               <FiTwitter size={18} />
             </Link>

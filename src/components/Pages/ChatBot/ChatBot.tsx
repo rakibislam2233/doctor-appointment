@@ -93,9 +93,16 @@ const ChatBot: React.FC = () => {
               {/* Submit Button */}
               <Form.Item>
                 <div className="mt-6">
-                  <CustomLoadingButton>Start Chat</CustomLoadingButton>
+                  <button 
+                    type="submit"  // This uses Ant Design's default button style without extra border or background
+                    className="bg-primary text-white p-2 w-full text-center rounded-md"
+                  >
+                    Start Chat
+                  </button>
                 </div>
               </Form.Item>
+
+
             </Form>
           </div>
         </div>

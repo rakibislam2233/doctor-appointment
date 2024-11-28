@@ -63,12 +63,15 @@ const ForgotPassword = () => {
             </Form.Item>
             {/* Submit Button */}
             <Form.Item>
-              <div className="mt-2">
-                <CustomLoadingButton loading={loading}>
-                  Get Otp
-                </CustomLoadingButton>
-              </div>
-            </Form.Item>
+                <div className="mt-6">
+                  <button 
+                    type="submit"  // This uses Ant Design's default button style without extra border or background
+                    className="bg-primary text-white p-2 w-full text-center rounded-md"
+                  >
+                    Get OTP
+                  </button>
+                </div>
+              </Form.Item>
           </Form>
         </div>
 

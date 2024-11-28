@@ -147,11 +147,16 @@ const Register: React.FC = () => {
             </Form.Item>
 
             {/* Submit Button */}
-            <Form.Item  className="col-span-full">
-              <CustomLoadingButton loading={loading}>
-                Sign Up
-              </CustomLoadingButton>
-            </Form.Item>
+            <Form.Item className="col-span-full">
+                <div className="mt-6">
+                  <button 
+                    type="submit"  // This uses Ant Design's default button style without extra border or background
+                    className="bg-primary text-white p-2 w-full text-center rounded-md"
+                  >
+                    Signup
+                  </button>
+                </div>
+              </Form.Item>
           </Form>
           <p className="text-gray-500 mt-5 text-center">
             Already have an account?{" "}

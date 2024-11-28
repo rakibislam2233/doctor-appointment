@@ -94,9 +94,14 @@ const Login: React.FC = () => {
 
               {/* Submit Button */}
               <Form.Item>
-                <CustomLoadingButton loading={loading}>
-                  Login
-                </CustomLoadingButton>
+                <div className="mt-6">
+                  <button 
+                    type="submit"  // This uses Ant Design's default button style without extra border or background
+                    className="bg-primary text-white p-2 w-full text-center rounded-md"
+                  >
+                   Login
+                  </button>
+                </div>
               </Form.Item>
             </Form>
 
