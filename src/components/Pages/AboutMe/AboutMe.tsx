@@ -4,7 +4,7 @@ import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import CustomBreadcrumb from "@/components/UI/CustomBreadcrumb";
 import CustomButton from "@/components/UI/CustomButton";
 import { HomeOutlined } from "@ant-design/icons";
-import { Image } from "antd";
+import Image from 'next/image'; // Import Next.js image component
 import Link from "next/link";
 import { FaAward } from "react-icons/fa";
 import { FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
@@ -41,17 +41,17 @@ const AboutMe = () => {
         <div className="w-full md:w-[80%] mx-auto flex flex-col lg:flex-row gap-20 mt-10">
           {/* Left Section (Doctor Image and Contact Info) */}
           <div className="w-full lg:w-1/3 rounded-xl">
-            <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center">
               <div className="w-full h-full max-w-[500px] mx-auto bg-[#226de5] flex justify-center relative rounded-xl px-5 py-8 -mt-0 lg:-mt-32">
-                <Image
-                  src={circle.src} // Image source for the circle
-                  alt="Decorative circle" // Alt text for accessibility (you can update this to be more descriptive)
+                <img
+                  src={circle.src}
+                  alt=""
                   className="w-[300px] md:w-[380px] lg:w-[390px] xl:w-[400px] -mr-14 md:-mr-16 xl:-mr-20 2xl:-mr-28"
                 />
-                <Image
-                  src={profileImage.src} // Image source for the profile image
-                  alt="Profile Image" // Alt text for accessibility (you can update this to be more descriptive)
-                  className="h-[280px] lg:h-[180px] xl:h-[270px] 2xl:h-[320px] bottom-0 absolute"
+                <img
+                  src={profileImage.src}
+                  alt=""
+                  className="h-[280px] lg:h-[180px] xl:h-[270px] 2xl:h-[320px] bottom-0 absolute "
                 />
               </div>
             </div>

@@ -19,9 +19,9 @@ const CustomLoadingButton: React.FC<CustomLoadingButtonProps> = ({
 }) => {
   return (
     <div
-      className={`w-full ${
-        border ? "border-2" : "border-none"
-      } p-0.5 border-2 border-[#77C4FE] rounded-xl`}
+      // className={`w-full ${
+      //   border ? "border-2" : "border-none"
+      // } p-0.5 border-2 border-[#77C4FE] rounded-xl`}
     >
       <button
         type="submit" // Use button instead of submit

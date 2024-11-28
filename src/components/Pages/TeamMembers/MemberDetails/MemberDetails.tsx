@@ -40,7 +40,7 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
           {/* Left Section (Doctor Image and Contact Info) */}
           <div className="w-full lg:w-1/3 rounded-xl">
             <div className="flex flex-col items-center">
-              <div className="w-full h-full max-w-[500px] mx-auto bg-primary flex justify-center relative rounded-xl px-5 py-8 -mt-0 lg:-mt-32">
+              <div className="w-full h-full max-w-[500px] mx-auto bg-[#226de5] flex justify-center relative rounded-xl px-5 py-8 -mt-0 lg:-mt-32">
                 <img
                   src={circle.src}
                   alt=""
@@ -111,7 +111,7 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
               {/* Degrees Section */}
               <div>
                 <h3 className="font-bold text-2xl mb-3 text-[#32526B] flex items-center gap-3">
-                  <MdSchool color="#77C4FE" size={32} /> Degrees
+                  <MdSchool color="#3780f9" size={32} /> Degrees
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">
@@ -152,7 +152,7 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
               {/* Experiences Section */}
               <div>
                 <h3 className="font-bold text-2xl mb-3 text-[#32526B] flex items-center gap-3">
-                  <MdWork color="#77C4FE" size={32} /> Experiences
+                  <MdWork color="#3780f9" size={32} /> Experiences
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">
@@ -189,7 +189,7 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
               {/* Awards/Achievements Section */}
               <div>
                 <h3 className="font-bold text-2xl mb-3 text-[#32526B] flex items-center gap-3">
-                  <FaAward color="#77C4FE" size={32} /> Awards/Achievements
+                  <FaAward color="#3780f9" size={32} /> Awards/Achievements
                 </h3>
                 <ul className="space-y-4 px-6">
                   <li className="flex items-start gap-3">

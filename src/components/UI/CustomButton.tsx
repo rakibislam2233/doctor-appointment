@@ -13,7 +13,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
 }) => {
   return (
     <button
-      className={`${className} bg-secondary flex px-12 py-3.5 justify-center border items-center gap-5 text-white rounded-xl  hover:bg-primary hover:border-primary  transition-all duration-500`}
+      className={`${className} bg-secondary flex px-12 py-3.5 justify-center border-none items-center gap-5 text-white rounded-xl  hover:bg-primary transition-all duration-500`}
     >
       {children}
     </button>
