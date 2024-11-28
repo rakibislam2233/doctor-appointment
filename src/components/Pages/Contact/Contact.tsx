@@ -7,7 +7,7 @@ import {
   HomeOutlined,
   MailOutlined,
   PhoneOutlined,
-  UserOutlined,
+  UserOutlined
 } from "@ant-design/icons";
 import { Form } from "antd";
 import { CiLocationOn } from "react-icons/ci";
@@ -31,11 +31,11 @@ const breadcrumbItems = [
         <HomeOutlined />
         <span>Home</span>
       </div>
-    ),
+    )
   },
   {
-    title: "Contact",
-  },
+    title: "Contact"
+  }
 ];
 
 // Define the Contact component with TypeScript
@@ -100,99 +100,112 @@ const Contact: React.FC = () => {
 
           {/* Right Section - Form */}
           <div className="w-full md:w-[60%] p-4 md:p-6 rounded-md">
-          <Form
-  form={form}
-  layout="vertical"
-  onFinish={handleSubmit}
-  className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4"
->
-  <Form.Item
-    name="firstName"
-    label="First Name"
-    rules={[{ required: true, message: "Please input your first name!" }]}
-  >
-    <CustomInput
-      icon={UserOutlined}
-      placeholder="Enter your first name"
-      className="bg-white"
-    />
-  </Form.Item>
+            <Form
+              form={form}
+              layout="vertical"
+              onFinish={handleSubmit}
+              className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4"
+            >
+              <Form.Item
+                name="firstName"
+                label="First Name"
+                rules={[
+                  { required: true, message: "Please input your first name!" }
+                ]}
+              >
+                <CustomInput
+                  icon={UserOutlined}
+                  placeholder="Enter your first name"
+                  className="bg-white"
+                />
+              </Form.Item>
 
-  <Form.Item
-    name="lastName"
-    label="Last Name"
-    rules={[{ required: true, message: "Please input your last name!" }]}
-  >
-    <CustomInput
-      icon={UserOutlined}
-      placeholder="Enter your last name"
-      className="bg-white"
-    />
-  </Form.Item>
+              <Form.Item
+                name="lastName"
+                label="Last Name"
+                rules={[
+                  { required: true, message: "Please input your last name!" }
+                ]}
+              >
+                <CustomInput
+                  icon={UserOutlined}
+                  placeholder="Enter your last name"
+                  className="bg-white"
+                />
+              </Form.Item>
 
-  <Form.Item
-    name="email"
-    label="Your Email"
-    rules={[
-      { required: true, type: "email", message: "Please input a valid email!" },
-    ]}
-  >
-    <CustomInput
-      icon={MailOutlined}
-      placeholder="Enter your email"
-      className="bg-white"
-    />
-  </Form.Item>
+              <Form.Item
+                name="email"
+                label="Your Email"
+                rules={[
+                  {
+                    required: true,
+                    type: "email",
+                    message: "Please input a valid email!"
+                  }
+                ]}
+              >
+                <CustomInput
+                  icon={MailOutlined}
+                  placeholder="Enter your email"
+                  className="bg-white"
+                />
+              </Form.Item>
 
-  <Form.Item
-    name="phone"
-    label="Your Phone Number"
-    rules={[{ required: true, message: "Please input your phone number!" }]}
-  >
-    <CustomInput
-      icon={PhoneOutlined}
-      placeholder="Enter your phone number"
-      className="bg-white"
-    />
-  </Form.Item>
+              <Form.Item
+                name="phone"
+                label="Your Phone Number"
+                rules={[
+                  { required: true, message: "Please input your phone number!" }
+                ]}
+              >
+                <CustomInput
+                  icon={PhoneOutlined}
+                  placeholder="Enter your phone number"
+                  className="bg-white"
+                />
+              </Form.Item>
 
-  <Form.Item
-    name="address"
-    label="Your Address"
-    className="col-span-full"
-    rules={[{ required: true, message: "Please input your address!" }]}
-  >
-    <CustomInput
-      icon={CiLocationOn}
-      placeholder="Enter your address"
-      className="bg-white"
-    />
-  </Form.Item>
+              <Form.Item
+                name="address"
+                label="Your Address"
+                className="col-span-full"
+                rules={[
+                  { required: true, message: "Please input your address!" }
+                ]}
+              >
+                <CustomInput
+                  icon={CiLocationOn}
+                  placeholder="Enter your address"
+                  className="bg-white"
+                />
+              </Form.Item>
 
-  <Form.Item
-    name="message"
-    label="Your Message"
-    className="col-span-full"
-    rules={[{ required: true, message: "Please input your message!" }]}
-  >
-    <CustomInput
-      placeholder="Write your message here"
-      isTextArea
-      className="bg-white"
-    />
-  </Form.Item>
-  <Form.Item className="col-span-full">
+              <Form.Item
+                name="message"
+                label="Your Message"
+                className="col-span-full"
+                rules={[
+                  { required: true, message: "Please input your message!" }
+                ]}
+              >
+                <CustomInput
+                  placeholder="Write your message here"
+                  isTextArea
+                  className="bg-white"
+                />
+              </Form.Item>
+              <Form.Item className="col-span-full">
                 <div className="mt-6">
-                  <button 
-                    type="submit"  // This uses Ant Design's default button style without extra border or background
+                  <button
+                    type="submit" // This uses Ant Design's default button style without extra border or background
                     className="bg-primary text-white p-2 w-full text-center rounded-md"
                   >
-                    Contact Us
+                    Contact Us    
                   </button>
                 </div>
               </Form.Item>
-</Form>
-
+            </Form>
           </div>
         </div>
       </MainContainer>
