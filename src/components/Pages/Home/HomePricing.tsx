@@ -6,7 +6,7 @@ const HomePricing = () => {
     <section className="w-full bg-[#F4FCF8] px-5 py-20">
       {/* Header Section */}
       <div className="text-center space-y-3 mb-10">
-        <h1 className="text-4xl font-semibold text-primary">Pricing</h1>
+        <h1 className="text-4xl font-semibold text-[#32526B]">Pricing</h1>
         <p className="">
           Problems trying to resolve the conflict between <br />
           the two major realms of Classical physics

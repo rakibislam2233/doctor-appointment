@@ -49,16 +49,18 @@ const ChatBot: React.FC = () => {
               layout="vertical"
               className="space-y-3"
             >
-              {/* Name Input Wrapped in Form.Item */}
               <Form.Item
                 name="name"
                 label="Your Name"
                 rules={[{ required: true, message: "Please input your name!" }]}
               >
-                <CustomInput placeholder="Name" icon={UserOutlined} />
+                <CustomInput
+                  placeholder="Name"
+                  icon={UserOutlined}
+                  className="bg-transparent"
+                />
               </Form.Item>
 
-              {/* Email Input Wrapped in Form.Item */}
               <Form.Item
                 name="email"
                 label="Your Email"
@@ -67,10 +69,13 @@ const ChatBot: React.FC = () => {
                   { type: "email", message: "Please enter a valid email!" },
                 ]}
               >
-                <CustomInput placeholder="Email" icon={MailOutlined} />
+                <CustomInput
+                  placeholder="Email"
+                  icon={MailOutlined}
+                  className="bg-transparent"
+                />
               </Form.Item>
 
-              {/* Message Input Wrapped in Form.Item */}
               <Form.Item
                 name="message"
                 label="Your Question"
@@ -78,7 +83,11 @@ const ChatBot: React.FC = () => {
                   { required: true, message: "Please input your question!" },
                 ]}
               >
-                <CustomInput placeholder="Write Now" isTextArea />
+                <CustomInput
+                  placeholder="Write Now"
+                  isTextArea
+                  className="bg-transparent"
+                />
               </Form.Item>
 
               {/* Submit Button */}
