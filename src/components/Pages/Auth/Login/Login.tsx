@@ -58,10 +58,11 @@ const Login: React.FC = () => {
                 label="Email"
                 rules={[
                   { required: true, message: "Please input your Email!" },
-                  { type: "email", message: "Please enter a valid email!" },
+                  { type: "email", message: "Please enter a valid email!" }
                 ]}
               >
-                <CustomInput className="bg-white"
+                <CustomInput
+                  className="bg-white"
                   icon={MailOutlined}
                   placeholder="Enter your Email"
                 />
@@ -72,10 +73,11 @@ const Login: React.FC = () => {
                 name="password"
                 label="Password"
                 rules={[
-                  { required: true, message: "Please input your Password!" },
+                  { required: true, message: "Please input your Password!" }
                 ]}
               >
-                <CustomInput className="bg-white"
+                <CustomInput
+                  className="bg-white"
                   icon={LockOutlined}
                   isPassword={true}
                   placeholder="Enter your Password"
@@ -94,13 +96,10 @@ const Login: React.FC = () => {
 
               {/* Submit Button */}
               <Form.Item>
-                <div className="mt-6">
-                  <button 
-                    type="submit"  // This uses Ant Design's default button style without extra border or background
-                    className="bg-primary text-white p-2 w-full text-center rounded-md"
-                  >
-                   Login
-                  </button>
+                <div className="mt-2">
+                  <CustomLoadingButton loading={loading}>
+                    Login
+                  </CustomLoadingButton>
                 </div>
               </Form.Item>
             </Form>
@@ -139,8 +138,6 @@ const Login: React.FC = () => {
               alt=""
               className="h-[280px] sm:h-[320px]  md:h-[330px] xl:h-[400px] 2xl:h-[430px] bottom-0 absolute "
             />
-
-         
           </div>
         </div>
       </MainContainer>

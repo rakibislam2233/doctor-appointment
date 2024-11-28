@@ -56,8 +56,7 @@ const VerifyEmail = () => {
 
           {/* Full width OTP Input */}
           <div className="flex justify-center mt-5">
-            <OTPInput
-              className="bg-white"
+            <OTPInput 
               value={otp}
               onChange={handleOtpChange}
               numInputs={6}

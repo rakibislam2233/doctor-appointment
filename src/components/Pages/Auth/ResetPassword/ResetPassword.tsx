@@ -20,7 +20,7 @@ interface ResetPasswordFormValues {
 const ResetPassword: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [form] = Form.useForm(); // Hook for handling form
-  const router = useRouter()
+  const router = useRouter();
   // Handle form submission
   const onFinish = (values: ResetPasswordFormValues) => {
     setLoading(true);
@@ -28,7 +28,7 @@ const ResetPassword: React.FC = () => {
     setTimeout(() => {
       console.log("Received values from form: ", values);
       setLoading(false);
-      router.push('/')
+      router.push("/");
     }, 2000);
   };
 
@@ -71,11 +71,12 @@ const ResetPassword: React.FC = () => {
                 {
                   min: 8,
                   max: 10,
-                  message: "Password must be between 8-10 characters!",
-                },
+                  message: "Password must be between 8-10 characters!"
+                }
               ]}
             >
-              <CustomInput className="bg-white"
+              <CustomInput
+                className="bg-white"
                 icon={LockOutlined}
                 isPassword={true}
                 placeholder="Enter your new password"
@@ -88,10 +89,11 @@ const ResetPassword: React.FC = () => {
               label="Confirm Password"
               rules={[
                 { required: true, message: "Please confirm your password!" },
-                { validator: validateConfirmPassword },
+                { validator: validateConfirmPassword }
               ]}
             >
-              <CustomInput className="bg-white"
+              <CustomInput
+                className="bg-white"
                 icon={LockOutlined}
                 isPassword={true}
                 placeholder="Confirm your password"
@@ -99,35 +101,30 @@ const ResetPassword: React.FC = () => {
             </Form.Item>
 
             {/* Submit Button */}
-             
+
             <Form.Item>
-                <div className="mt-6">
-                  <button 
-                    type="submit"  // This uses Ant Design's default button style without extra border or background
-                    className="bg-primary text-white p-2 w-full text-center rounded-md"
-                  >
-                     Reset Password
-                  </button>
-                </div>
-              </Form.Item>
+              <div className="mt-2">
+                <CustomLoadingButton loading={loading}>
+                  Reset Password
+                </CustomLoadingButton>
+              </div>
+            </Form.Item>
           </Form>
         </div>
 
         {/* Right side: Nurse image and circle background */}
         <div className="w-full bg-[#C0E4FF]  rounded-xl flex justify-center items-center relative order-first md:order-last">
-            <img
-              src={circle.src}
-              alt=""
-              className="w-[400px] sm:w-[450px] md:w-[480px] xl:w-[500px] -mr-14 md:-mr-16 xl:-mr-20 2xl:-mr-28"
-            />
-            <img
-              src={nurseImage.src}
-              alt=""
-              className="h-[270px] sm:h-[310px]  md:h-[320px] xl:h-[390px] 2xl:h-[420px] bottom-0 absolute "
-            />
-
-         
-          </div>
+          <img
+            src={circle.src}
+            alt=""
+            className="w-[400px] sm:w-[450px] md:w-[480px] xl:w-[500px] -mr-14 md:-mr-16 xl:-mr-20 2xl:-mr-28"
+          />
+          <img
+            src={nurseImage.src}
+            alt=""
+            className="h-[270px] sm:h-[310px]  md:h-[320px] xl:h-[390px] 2xl:h-[420px] bottom-0 absolute "
+          />
+        </div>
       </MainContainer>
     </section>
   );

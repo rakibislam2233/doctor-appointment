@@ -8,7 +8,8 @@ import circle from "@/assets/hero-section/circle.png";
 import MainContainer from "@/components/Shared/MainContainer/MainContainer";
 import React from "react";
 import CustomInput from "@/components/UI/CustomInput";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"; 
+import CustomLoadingButton from "@/components/UI/CustomLoadingButton";
 
 interface IForgotPasswordProps {
   email: string;
@@ -62,15 +63,12 @@ const ForgotPassword = () => {
             </Form.Item>
             {/* Submit Button */}
             <Form.Item>
-                <div className="mt-6">
-                  <button 
-                    type="submit"  // This uses Ant Design's default button style without extra border or background
-                    className="bg-primary text-white p-2 w-full text-center rounded-md"
-                  >
-                    Get OTP
-                  </button>
-                </div>
-              </Form.Item>
+              <div className="mt-2">
+                <CustomLoadingButton loading={loading}>
+                  Get Otp
+                </CustomLoadingButton>
+              </div>
+            </Form.Item>
           </Form>
         </div>
 

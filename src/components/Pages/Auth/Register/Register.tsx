@@ -6,7 +6,7 @@ import {
   LockOutlined,
   UserOutlined,
   PhoneOutlined,
-  HomeOutlined,
+  HomeOutlined
 } from "@ant-design/icons";
 import logo from "@/assets/logo/logo.png";
 import nurseImage from "@/assets/hero-section/nurse.png";
@@ -68,7 +68,11 @@ const Register: React.FC = () => {
               label="Name"
               rules={[{ required: true, message: "Please input your Name!" }]}
             >
-              <CustomInput className="bg-white" icon={UserOutlined} placeholder="Enter your Name" />
+              <CustomInput
+                className="bg-white"
+                icon={UserOutlined}
+                placeholder="Enter your Name"
+              />
             </Form.Item>
 
             {/* Email Input Wrapped in Form.Item */}
@@ -77,10 +81,14 @@ const Register: React.FC = () => {
               label="Email"
               rules={[
                 { required: true, message: "Please input your Email!" },
-                { type: "email", message: "Please enter a valid email!" },
+                { type: "email", message: "Please enter a valid email!" }
               ]}
             >
-              <CustomInput className="bg-white" icon={MailOutlined} placeholder="Enter your Email" />
+              <CustomInput
+                className="bg-white"
+                icon={MailOutlined}
+                placeholder="Enter your Email"
+              />
             </Form.Item>
 
             {/* Phone Number Input Wrapped in Form.Item */}
@@ -88,10 +96,11 @@ const Register: React.FC = () => {
               name="phone"
               label="Phone Number"
               rules={[
-                { required: true, message: "Please input your Phone Number!" },
+                { required: true, message: "Please input your Phone Number!" }
               ]}
             >
-              <CustomInput className="bg-white"
+              <CustomInput
+                className="bg-white"
                 icon={PhoneOutlined}
                 placeholder="Enter your Phone Number"
               />
@@ -102,10 +111,11 @@ const Register: React.FC = () => {
               name="address"
               label="Address"
               rules={[
-                { required: true, message: "Please input your Address!" },
+                { required: true, message: "Please input your Address!" }
               ]}
             >
-              <CustomInput className="bg-white"
+              <CustomInput
+                className="bg-white"
                 icon={HomeOutlined}
                 placeholder="Enter your Address"
               />
@@ -114,11 +124,10 @@ const Register: React.FC = () => {
             <Form.Item
               name="gender"
               label="Gender"
-              rules={[
-                { required: true, message: "Please input your Gender!" },
-              ]}
+              rules={[{ required: true, message: "Please input your Gender!" }]}
             >
-              <CustomInput className="bg-white"
+              <CustomInput
+                className="bg-white"
                 icon={HomeOutlined}
                 placeholder="Enter your Gender"
               />
@@ -129,10 +138,11 @@ const Register: React.FC = () => {
               name="password"
               label="Password"
               rules={[
-                { required: true, message: "Please input your Password!" },
+                { required: true, message: "Please input your Password!" }
               ]}
             >
-              <CustomInput className="bg-white"
+              <CustomInput
+                className="bg-white"
                 icon={LockOutlined}
                 isPassword={true}
                 placeholder="Enter your Password"
@@ -140,23 +150,25 @@ const Register: React.FC = () => {
             </Form.Item>
 
             {/* Terms and Conditions Wrapped in Form.Item */}
-            <Form.Item name="terms" valuePropName="checked"  className="col-span-full">
+            <Form.Item
+              name="terms"
+              valuePropName="checked"
+              className="col-span-full"
+            >
               <Checkbox>
                 I accept the Terms of Service and Privacy Policy
               </Checkbox>
             </Form.Item>
 
             {/* Submit Button */}
-            <Form.Item className="col-span-full">
-                <div className="mt-6">
-                  <button 
-                    type="submit"  // This uses Ant Design's default button style without extra border or background
-                    className="bg-primary text-white p-2 w-full text-center rounded-md"
-                  >
-                    Signup
-                  </button>
-                </div>
-              </Form.Item>
+
+            <Form.Item>
+              <div className="mt-2">
+                <CustomLoadingButton loading={loading}>
+                  Signup
+                </CustomLoadingButton>
+              </div>
+            </Form.Item>
           </Form>
           <p className="text-gray-500 mt-5 text-center">
             Already have an account?{" "}
