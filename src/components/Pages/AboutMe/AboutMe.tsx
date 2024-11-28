@@ -34,14 +34,14 @@ const AboutMe = () => {
   return (
     <section className="w-full px-5 py-10">
       <MainContainer>
-        <CustomBreadcrumb items={breadcrumbItems} />
-        <div className="w-full hidden lg:block p-36 my-5 rounded-xl bg-[#F1F9FF]"></div>
+        <CustomBreadcrumb items={breadcrumbItems} /> 
+        <div className="w-full hidden lg:block p-36 my-5 rounded-xl bg-secondary"></div>
         {/* Main content container */}
         <div className="w-full md:w-[80%] mx-auto flex flex-col lg:flex-row gap-20 mt-10">
           {/* Left Section (Doctor Image and Contact Info) */}
           <div className="w-full lg:w-1/3 rounded-xl">
             <div className="flex flex-col items-center">
-              <div className="w-full h-full max-w-[500px] mx-auto bg-[#C0E4FF] flex justify-center relative rounded-xl px-5 py-8 -mt-0 lg:-mt-32">
+              <div className="w-full h-full max-w-[500px] mx-auto bg-primary flex justify-center relative rounded-xl px-5 py-8 -mt-0 lg:-mt-32">
                 <img
                   src={circle.src}
                   alt=""
@@ -56,7 +56,7 @@ const AboutMe = () => {
             </div>
             <div className="w-full space-y-4 my-6">
               <div className="flex justify-between items-center">
-                <h1 className="text-2xl font-semibold text-[#274760]">
+                <h1 className="text-2xl font-semibold text-secondary">
                   Contact Us
                 </h1>
                 <div className="flex space-x-3">
@@ -94,7 +94,7 @@ const AboutMe = () => {
                   Appointment Schedules
                 </h1>
               </div>
-              <div className="w-full space-y-4 p-8 rounded-xl bg-secondary">
+              <div className="w-full space-y-4 p-8 rounded-xl bg-secondary text-[#fff]">
                 <div className="flex justify-between items-center">
                   <h1>Monday</h1>
                   <h1 className="font-semibold flex items-center gap-1">
@@ -127,7 +127,7 @@ const AboutMe = () => {
 
           {/* Right Section (Doctor Info and Biography) */}
           <div className="w-full md:w-[600px] mx-auto rounded-xl -mt-0 lg:-mt-56">
-            <div className="space-y-16 text-[#274760]">
+            <div className="space-y-16 text-[#fff]">
               {/* Header Section */}
               <div className="space-y-4">
                 <h1 className="text-4xl font-semibold">

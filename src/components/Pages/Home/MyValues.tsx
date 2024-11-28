@@ -52,7 +52,7 @@ const MyValues = () => {
                 <div className="size-16 bg-primary rounded-full flex justify-center items-center">
                   <Image src={value.image} alt="life" width={35} height={35} />
                 </div>
-                <h1 className="text-3xl font-semibold text-[#32526B]">
+                <h1 className="text-3xl font-semibold text-primary">
                   {value.title}
                 </h1>
                 <h1>{value.description}</h1>

@@ -12,7 +12,7 @@ interface TeamMember {
 }
 function TeamMemberCard({ member }: { member: TeamMember }) {
   return (
-    <div className="bg-[#EEE2EE] shadow-lg rounded-xl overflow-hidden px-5 py-3">
+    <div className="bg-secondary text-[#fff] shadow-lg rounded-xl overflow-hidden px-5 py-3">
       {/* Profile Image */}
       <div className="relative w-full h-96 rounded-t-xl">
         <Link href={`/team-members/${member.id}`}>
@@ -27,12 +27,12 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
 
       {/* Profile Info */}
       <div className="py-2">
-        <h2 className="text-xl font-semibold text-[#32526B]">{member.name}</h2>
-        <p className="text-gray-600">{member.degree}</p>
+        <h2 className="text-xl font-semibold text-[#fff]">{member.name}</h2>
+        <p className="text-gray-600 text-[#fff]">{member.degree}</p>
 
         {/* Specialties */}
         <div className="mt-2 flex justify-between items-center">
-          <p className="text-gray-600 ">Specialties</p>
+          <p className="text-gray-600 text-[#fff]">Specialties</p>
           <div className="relative">
             <Image
               width={180}

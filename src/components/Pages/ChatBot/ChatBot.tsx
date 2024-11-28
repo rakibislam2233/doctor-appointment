@@ -43,7 +43,7 @@ const ChatBot: React.FC = () => {
           Asking Your Question
         </h1>
         <div className="w-full py-8">
-          <div className="w-full max-w-2xl mx-auto border px-8 py-14 bg-[#F1F9FF] rounded-xl border-[#77C4FE]">
+          <div className="w-full max-w-2xl mx-auto border px-8 py-14 bg-[#fff] rounded-xl border-secondary">
             <Form
               onFinish={handleSubmit}
               layout="vertical"

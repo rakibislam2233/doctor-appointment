@@ -34,13 +34,13 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
     <section className="w-full px-5 py-10">
       <MainContainer>
         <CustomBreadcrumb items={breadcrumbItems} />
-        <div className="w-full hidden lg:block p-36 my-5 rounded-xl bg-[#F1F9FF]"></div>
+        <div className="w-full hidden lg:block p-36 my-5 rounded-xl bg-secondary"></div>
         {/* Main content container */}
         <div className="w-full md:w-[80%] mx-auto flex flex-col lg:flex-row gap-20 mt-10">
           {/* Left Section (Doctor Image and Contact Info) */}
           <div className="w-full lg:w-1/3 rounded-xl">
             <div className="flex flex-col items-center">
-              <div className="w-full h-full max-w-[500px] mx-auto bg-[#C0E4FF] flex justify-center relative rounded-xl px-5 py-8 -mt-0 lg:-mt-32">
+              <div className="w-full h-full max-w-[500px] mx-auto bg-primary flex justify-center relative rounded-xl px-5 py-8 -mt-0 lg:-mt-32">
                 <img
                   src={circle.src}
                   alt=""
@@ -61,19 +61,19 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
                 <div className="flex space-x-3">
                   <Link
                     href={"/"}
-                    className="size-9 border border-[#6CB2E7] text-[#6CB2E7] rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
+                    className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
                   >
                     <FiFacebook size={18} />
                   </Link>
                   <Link
                     href={"/"}
-                    className="size-9 border border-[#6CB2E7] text-[#6CB2E7] rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
+                    className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
                   >
                     <FiLinkedin size={18} />
                   </Link>
                   <Link
                     href={"/"}
-                    className="size-9 border border-[#6CB2E7] text-[#6CB2E7] rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
+                    className="size-9 border border-secondary text-secondary rounded-full flex justify-center items-center hover:bg-[#6CB2E7] hover:text-white transition-all duration-300"
                   >
                     <FiTwitter size={18} />
                   </Link>
@@ -94,7 +94,7 @@ const MemberDetails = ({ memberId }: MemberDetailsProps) => {
           <div className="w-full md:w-[600px] mx-auto rounded-xl -mt-0 lg:-mt-56">
             <div className="space-y-16 text-[#274760]">
               {/* Header Section */}
-              <div className="space-y-4">
+              <div className="space-y-4 text-[#fff]">
                 <h1 className="text-4xl font-semibold">
                   Dr. Evans Onwubiko, MD, MPH, FAPA
                 </h1>
