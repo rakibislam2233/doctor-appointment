@@ -68,7 +68,7 @@ const Register: React.FC = () => {
               label="Name"
               rules={[{ required: true, message: "Please input your Name!" }]}
             >
-              <CustomInput icon={UserOutlined} placeholder="Enter your Name" />
+              <CustomInput className="bg-white" icon={UserOutlined} placeholder="Enter your Name" />
             </Form.Item>
 
             {/* Email Input Wrapped in Form.Item */}
@@ -80,7 +80,7 @@ const Register: React.FC = () => {
                 { type: "email", message: "Please enter a valid email!" },
               ]}
             >
-              <CustomInput icon={MailOutlined} placeholder="Enter your Email" />
+              <CustomInput className="bg-white" icon={MailOutlined} placeholder="Enter your Email" />
             </Form.Item>
 
             {/* Phone Number Input Wrapped in Form.Item */}
@@ -91,7 +91,7 @@ const Register: React.FC = () => {
                 { required: true, message: "Please input your Phone Number!" },
               ]}
             >
-              <CustomInput
+              <CustomInput className="bg-white"
                 icon={PhoneOutlined}
                 placeholder="Enter your Phone Number"
               />
@@ -105,7 +105,7 @@ const Register: React.FC = () => {
                 { required: true, message: "Please input your Address!" },
               ]}
             >
-              <CustomInput
+              <CustomInput className="bg-white"
                 icon={HomeOutlined}
                 placeholder="Enter your Address"
               />
@@ -118,7 +118,7 @@ const Register: React.FC = () => {
                 { required: true, message: "Please input your Gender!" },
               ]}
             >
-              <CustomInput
+              <CustomInput className="bg-white"
                 icon={HomeOutlined}
                 placeholder="Enter your Gender"
               />
@@ -132,7 +132,7 @@ const Register: React.FC = () => {
                 { required: true, message: "Please input your Password!" },
               ]}
             >
-              <CustomInput
+              <CustomInput className="bg-white"
                 icon={LockOutlined}
                 isPassword={true}
                 placeholder="Enter your Password"
@@ -155,7 +155,7 @@ const Register: React.FC = () => {
           </Form>
           <p className="text-gray-500 mt-5 text-center">
             Already have an account?{" "}
-            <Link href="/login" className="text-blue-500">
+            <Link href="/login" className="text-secondary">
               Login
             </Link>
           </p>

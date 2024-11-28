@@ -60,14 +60,14 @@ const Contact: React.FC = () => {
                   <IoMdCall className="text-white" size={20} />
                 </div>
                 <div className="mt-2">
-                  <h1 className="text-gray-800 text-xl font-semibold">
+                  <h1 className="text-white text-xl font-semibold">
                     Call To Us
                   </h1>
                   <div className="space-y-4 mt-7">
-                    <p className="text-gray-500 text-lg">
+                    <p className="text-white text-lg">
                       We are available 24/7, 7 days a week.
                     </p>
-                    <p className="text-gray-800 font-medium">
+                    <p className="text-white font-medium">
                       Phone: +156343-453233
                     </p>
                   </div>
@@ -79,17 +79,17 @@ const Contact: React.FC = () => {
                   <IoMdMail className="text-white" size={20} />
                 </div>
                 <div className="mt-2">
-                  <h1 className="text-gray-800 text-xl font-semibold">
+                  <h1 className="text-white text-xl font-semibold">
                     Send us an email
                   </h1>
                   <div className="space-y-4 mt-7">
-                    <p className="text-gray-500 text-lg">
+                    <p className="text-white text-lg">
                       Fill out our form and we will contact you within 24 hours.
                     </p>
-                    <p className="text-gray-800 font-medium">
+                    <p className="text-white font-medium">
                       Email: rakib2020.tkg@gmail.com
                     </p>
-                    <p className="text-gray-800 font-medium">
+                    <p className="text-white font-medium">
                       Email: Support@Website.com
                     </p>
                   </div>
@@ -100,107 +100,93 @@ const Contact: React.FC = () => {
 
           {/* Right Section - Form */}
           <div className="w-full md:w-[60%] p-4 md:p-6 rounded-md">
-            <Form
-              form={form}
-              layout="vertical"
-              onFinish={handleSubmit}
-              className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4"
-            >
-              {/* First Name Input Wrapped in Form.Item */}
-              <Form.Item
-                name="firstName"
-                label="First Name"
-                rules={[
-                  { required: true, message: "Please input your first name!" },
-                ]}
-              >
-                <CustomInput
-                  icon={UserOutlined}
-                  placeholder="Enter your first name"
-                />
-              </Form.Item>
+          <Form
+  form={form}
+  layout="vertical"
+  onFinish={handleSubmit}
+  className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4"
+>
+  <Form.Item
+    name="firstName"
+    label="First Name"
+    rules={[{ required: true, message: "Please input your first name!" }]}
+  >
+    <CustomInput
+      icon={UserOutlined}
+      placeholder="Enter your first name"
+      className="bg-white"
+    />
+  </Form.Item>
 
-              {/* Last Name Input Wrapped in Form.Item */}
-              <Form.Item
-                name="lastName"
-                label="Last Name"
-                rules={[
-                  { required: true, message: "Please input your last name!" },
-                ]}
-              >
-                <CustomInput
-                  icon={UserOutlined}
-                  placeholder="Enter your last name"
-                />
-              </Form.Item>
+  <Form.Item
+    name="lastName"
+    label="Last Name"
+    rules={[{ required: true, message: "Please input your last name!" }]}
+  >
+    <CustomInput
+      icon={UserOutlined}
+      placeholder="Enter your last name"
+      className="bg-white"
+    />
+  </Form.Item>
 
-              {/* Email Input Wrapped in Form.Item */}
-              <Form.Item
-                name="email"
-                label="Your Email"
-                rules={[
-                  {
-                    required: true,
-                    type: "email",
-                    message: "Please input a valid email!",
-                  },
-                ]}
-              >
-                <CustomInput
-                  icon={MailOutlined}
-                  placeholder="Enter your email"
-                />
-              </Form.Item>
+  <Form.Item
+    name="email"
+    label="Your Email"
+    rules={[
+      { required: true, type: "email", message: "Please input a valid email!" },
+    ]}
+  >
+    <CustomInput
+      icon={MailOutlined}
+      placeholder="Enter your email"
+      className="bg-white"
+    />
+  </Form.Item>
 
-              {/* Phone Number Input Wrapped in Form.Item */}
-              <Form.Item
-                name="phone"
-                label="Your Phone Number"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input your phone number!",
-                  },
-                ]}
-              >
-                <CustomInput
-                  icon={PhoneOutlined}
-                  placeholder="Enter your phone number"
-                />
-              </Form.Item>
+  <Form.Item
+    name="phone"
+    label="Your Phone Number"
+    rules={[{ required: true, message: "Please input your phone number!" }]}
+  >
+    <CustomInput
+      icon={PhoneOutlined}
+      placeholder="Enter your phone number"
+      className="bg-white"
+    />
+  </Form.Item>
 
-              {/* Address Input Wrapped in Form.Item */}
-              <Form.Item
-                name="address"
-                label="Your Address"
-                className="col-span-full"
-                rules={[
-                  { required: true, message: "Please input your address!" },
-                ]}
-              >
-                <CustomInput
-                  icon={CiLocationOn}
-                  placeholder="Enter your address"
-                />
-              </Form.Item>
+  <Form.Item
+    name="address"
+    label="Your Address"
+    className="col-span-full"
+    rules={[{ required: true, message: "Please input your address!" }]}
+  >
+    <CustomInput
+      icon={CiLocationOn}
+      placeholder="Enter your address"
+      className="bg-white"
+    />
+  </Form.Item>
 
-              {/* Message Input Wrapped in Form.Item */}
-              <Form.Item
-                name="message"
-                label="Your Message"
-                className="col-span-full"
-                rules={[
-                  { required: true, message: "Please input your message!" },
-                ]}
-              >
-                <CustomInput placeholder="Write your message here" isTextArea />
-              </Form.Item>
+  <Form.Item
+    name="message"
+    label="Your Message"
+    className="col-span-full"
+    rules={[{ required: true, message: "Please input your message!" }]}
+  >
+    <CustomInput
+      placeholder="Write your message here"
+      isTextArea
+      className="bg-white"
+    />
+  </Form.Item>
 
-              {/* Submit Button */}
-              <Form.Item className="col-span-full">
-                <CustomLoadingButton>Submit</CustomLoadingButton>
-              </Form.Item>
-            </Form>
+  <Form.Item className="col-span-full">
+    <CustomLoadingButton>Submit</CustomLoadingButton>
+  </Form.Item>
+</Form>
+
           </div>
         </div>
       </MainContainer>

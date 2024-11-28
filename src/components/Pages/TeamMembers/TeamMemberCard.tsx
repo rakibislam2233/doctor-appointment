@@ -28,11 +28,11 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
       {/* Profile Info */}
       <div className="py-2">
         <h2 className="text-xl font-semibold text-[#fff]">{member.name}</h2>
-        <p className="text-gray-600 text-[#fff]">{member.degree}</p>
+        <p className=" text-[#fff]">{member.degree}</p>
 
         {/* Specialties */}
         <div className="mt-2 flex justify-between items-center">
-          <p className="text-gray-600 text-[#fff]">Specialties</p>
+          <p className=" text-[#fff]">Specialties</p>
           <div className="relative">
             <Image
               width={180}

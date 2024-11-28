@@ -57,6 +57,7 @@ const VerifyEmail = () => {
           {/* Full width OTP Input */}
           <div className="flex justify-center mt-5">
             <OTPInput
+              className="bg-white"
               value={otp}
               onChange={handleOtpChange}
               numInputs={6}
@@ -94,19 +95,17 @@ const VerifyEmail = () => {
 
         {/* Right side: Nurse image and circle background */}
         <div className="w-full bg-[#C0E4FF]  rounded-xl flex justify-center items-center relative order-first md:order-last">
-            <img
-              src={circle.src}
-              alt=""
-              className="w-[400px] sm:w-[450px] md:w-[480px] xl:w-[500px] -mr-14 md:-mr-16 xl:-mr-20 2xl:-mr-28"
-            />
-            <img
-              src={nurseImage.src}
-              alt=""
-              className="h-[280px] sm:h-[320px]  md:h-[310px] xl:h-[380px] 2xl:h-[410px] bottom-0 absolute "
-            />
-
-         
-          </div>
+          <img
+            src={circle.src}
+            alt=""
+            className="w-[400px] sm:w-[450px] md:w-[480px] xl:w-[500px] -mr-14 md:-mr-16 xl:-mr-20 2xl:-mr-28"
+          />
+          <img
+            src={nurseImage.src}
+            alt=""
+            className="h-[280px] sm:h-[320px]  md:h-[310px] xl:h-[380px] 2xl:h-[410px] bottom-0 absolute "
+          />
+        </div>
       </MainContainer>
     </section>
   );

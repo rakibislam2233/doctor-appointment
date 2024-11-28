@@ -75,7 +75,7 @@ const ResetPassword: React.FC = () => {
                 },
               ]}
             >
-              <CustomInput
+              <CustomInput className="bg-white"
                 icon={LockOutlined}
                 isPassword={true}
                 placeholder="Enter your new password"
@@ -91,7 +91,7 @@ const ResetPassword: React.FC = () => {
                 { validator: validateConfirmPassword },
               ]}
             >
-              <CustomInput
+              <CustomInput className="bg-white"
                 icon={LockOutlined}
                 isPassword={true}
                 placeholder="Confirm your password"

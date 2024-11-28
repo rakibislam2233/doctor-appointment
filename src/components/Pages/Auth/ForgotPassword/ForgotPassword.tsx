@@ -59,7 +59,7 @@ const ForgotPassword = () => {
                 { type: "email", message: "Please enter a valid email!" },
               ]}
             >
-              <CustomInput icon={MailOutlined} placeholder="Enter your Email" />
+              <CustomInput className="bg-white" icon={MailOutlined} placeholder="Enter your Email" />
             </Form.Item>
             {/* Submit Button */}
             <Form.Item>

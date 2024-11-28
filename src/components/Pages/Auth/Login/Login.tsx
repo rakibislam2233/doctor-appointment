@@ -61,7 +61,7 @@ const Login: React.FC = () => {
                   { type: "email", message: "Please enter a valid email!" },
                 ]}
               >
-                <CustomInput
+                <CustomInput className="bg-white"
                   icon={MailOutlined}
                   placeholder="Enter your Email"
                 />
@@ -75,7 +75,7 @@ const Login: React.FC = () => {
                   { required: true, message: "Please input your Password!" },
                 ]}
               >
-                <CustomInput
+                <CustomInput className="bg-white"
                   icon={LockOutlined}
                   isPassword={true}
                   placeholder="Enter your Password"
@@ -102,7 +102,7 @@ const Login: React.FC = () => {
 
             <p className="text-gray-500 mt-5 text-center">
               Already have an account?{" "}
-              <Link href="/register" className="text-blue-500">
+              <Link href="/register" className="text-secondary">
                 Register
               </Link>
             </p>
